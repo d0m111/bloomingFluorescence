@@ -238,12 +238,12 @@ contraBassCl = \new Staff = "Heni" \with{
     \stopStaff
     \hide Rest r2 
     \undo \hide Rest 
-    s2*18
+    s2*16
     %158-160
     \startStaff
     <<\relative c{\hide NoteHead \stemDown \blancheNH \octavaUp <d'' e'>2 2 8.[ \stopOctava g16\rest]}
     \\
-    \relative c{\hide Stem \blancheNH <d'' e'>2\-\pp-- s2 s8. g16\rest }>> r4
+    \relative c{\hide Stem \blancheNH <d'' e'>2\-\pp^- s2 s8. g16\rest }>> r4
     %161
     \stopStaff
     s2*8
