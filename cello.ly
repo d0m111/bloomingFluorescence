@@ -157,7 +157,7 @@ cello = \new Staff = "Rob" \with{
     %m57
     \startStaff
     \clef treble
-    \uN \lineDashed d''8\mp\- r8 r4
+    r8 \uN \lineDashed d''8\mp\-  r4
     %m58
     \stopStaff
     s2*7
@@ -203,7 +203,7 @@ cello = \new Staff = "Rob" \with{
     \lineDashed b8.\mf\-[ r16] r4
     %m86
     \clef bass
-    r8 \noireNH c,,,8-.\mp\laissezVibrer^\markup{\teeny{"pizz."}} r4
+    r16 \noireNH c,,,8.-.\mp\laissezVibrer^\markup{\teeny{"pizz."}} r4
     %87
     \clef treble 
     <<\relative c{\hide NoteHead \uN \stemDown \tuplet 3/2{g''8\rest^\markup{\teeny{"crine"}} a'4} 16[ g8.\rest]}

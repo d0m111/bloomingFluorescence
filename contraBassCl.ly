@@ -97,16 +97,16 @@ contraBassCl = \new Staff = "Heni" \with{
     %m49
     s8 s16 d'\rest\f}>> r4
     %m50 
-    r4 r16 \dalniente gs'8.\-\<
+    r4 r16 \dalniente gs'8.\-
     %m51
-    \stopStaff \hide Rest r2\pp
+    % \stopStaff \hide Rest r2\pp
     %52
-    \startStaff \undo \hide Rest
-    <<\relative c' {  s32 \diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \override Stem.length = #25 <e'' f>8..\-}
+    % \startStaff \undo \hide Rest
+    <<\relative c'{\override NoteHead.no-ledgers = ##t \hide NoteHead \diamondH \stemDown \override Stem.length = #30 \once \override NoteColumn.force-hshift = #0.5 e''4 4 4}
     \\
-    \relative c' { r32 \slap cs,8\pp s16. }
+    \relative c'{ \override NoteHead.no-ledgers = ##t \hide Stem \hide Flag \diamondH \once \override NoteColumn.force-hshift = #0.5 <e'' f>4\- s4 s4 }
     \\
-    \relative c'{ \hide Stem \hide Flag s16 \noireNH \override NoteHead.no-ledgers = ##t \magnifyMusic0.73{cs,32_\markup{\teeny{"bisb."}}}  \magnifyMusic0.45{32 32 32 32 32 } }>>
+    \relative c'{ \hide Stem \hide Flag \noireNH \once \override NoteColumn.force-hshift = #0.5 cs,4\pp\- s4 s4 }>>
     r16 \uN \dalniente gs8.\<_\markup{\line{"[R]"}\draw-line#'(3 . 0)}--\- 
     %53
     r4\mp r8[ r32 \slap e-.->\f( \xH a' af] 
@@ -119,9 +119,9 @@ contraBassCl = \new Staff = "Heni" \with{
     \startStaff
     <<\relative c{\hide NoteHead \noireNH g'8\rest[ \dalniente c,8\<] 8 \dalniente 8\p\> 
     %57
-    \undo \hide NoteHead \uN \lineDashed cs'8[\-\f_\markup{\line{"[R]"}\draw-line#'(3 . 0)}\upbow d8\rest] g4\rest}
+    8[\- d8\rest\!] g4\rest}
     \\
-    \relative c{\hide Stem g'8\rest c,8\- s8 s8 }>>
+    \relative c{\hide Stem g'8\rest c,8\- s8 s8 s8 }>>
     %58
     \stopStaff
     s2*7
@@ -166,23 +166,11 @@ contraBassCl = \new Staff = "Heni" \with{
     %85
     \noireNH \lineDashed b8:32\p\-[ r8] r4
     %86
-    <<\relative c{g''8\rest \override NoteHead.no-ledgers = ##t \hide NoteHead \diamondH \stemDown \override Stem.length = #30 \once \override NoteColumn.force-hshift = #0.5 e''8 16 g,,8.\rest}
+    <<\relative c{g''16\rest \override NoteHead.no-ledgers = ##t \hide NoteHead \diamondH \stemDown \override Stem.length = #30 \once \override NoteColumn.force-hshift = #0.5 e''8. 4 4 4 8 \undo \hide NoteHead \override NoteHead.no-ledgers = ##f \xH \slurDown c,,,32_._>(\f^\markup{"+"} g''?\flageolet) g16\rest}
     \\
-    \relative c{ g''8\rest \override NoteHead.no-ledgers = ##t \hide Stem \hide Flag \diamondH \once \override NoteColumn.force-hshift = #0.5 <e'' f>8\- s16 g,,8\rest s16 }
+    \relative c{ g''16\rest \override NoteHead.no-ledgers = ##t \hide Stem \hide Flag \diamondH \once \override NoteColumn.force-hshift = #0.5 <e'' f>8.\- s4 s4 s4 s8 }
     \\
-    \relative c{ g''8\rest \hide Stem \hide Flag \noireNH \once \override NoteColumn.force-hshift = #0.5 d,8\pp\- s16 g'8\rest s16 }>>
-    %87
-    r4
-    <<\relative c{g''8\rest[ \hide NoteHead \uN gs8:32_\markup{\line{"[R]"}\draw-line#'(3 . 0)}]
-    %88
-    g8:32[ \xH \slurDown c,,32_._>(\f g''?) g16\rest]}
-    \\
-    \relative c{
-        %87
-        g''8\rest \hide Stem \uN \lineDashed gs8\- 
-        %88
-        s8[ \xH c,,32 g''32 g16\rest]
-    }>>
+    \relative c{ g''16\rest \hide Stem \hide Flag \noireNH \once \override NoteColumn.force-hshift = #0.5 d,8.\pp\- s4 s4 s4 s8 }>>
     r4
     \stopStaff
     %89
@@ -193,9 +181,10 @@ contraBassCl = \new Staff = "Heni" \with{
     r16 \slap cs,16-.->\f^\markup{\teeny \italic{"slap"}} << \relative c{\hide NoteHead cs8  16[ d'8.\rest]  d8.\rest[ \dalniente e,16\<] 16[ \dalniente 8\mp\> d'16\rest\!] }
     \\
     \relative c{\hide Stem \dalNienteExpo cs8\-\< s32. s64\f d'8\rest s16 s8. e,16\- s16 s8 d'16\rest}>> %m4
-    r4 <<\relative c{s8. \magnifyMusic 0.75{\hide NoteHead \slap \stemDown \slurDown c32_.( \override NoteHead.no-ledgers = ##t  32_. 32_. 32_.)} s8. \override NoteHead.no-ledgers = ##f \stemUp cs8[ 16 b'16\rest]}
+    R2
+    <<\relative c{s4 \override NoteHead.no-ledgers = ##f \stemUp cs8[ \hide NoteHead 16 b'16\rest]}
     \\
-    \relative c{b''8.\rest \stemUp \slap cs,,16\mf\>^\markup{\teeny \italic{"slap (ricochet)"}} s16 \stemDown \dalniente \noireNH b''8.\p\> \glissando \dalniente \hide Stem \noireNH \magnifyMusic 0.75{\grace {\hide Stem \parenthesize as16}} \dalniente cs,,8\<\- s16 b'16\rest\f  }>> %m5
+    \relative c{\stemDown \dalniente \noireNH b''4\p\>^> \glissando \dalniente \hide Stem \noireNH \magnifyMusic 0.75{\grace {\hide Stem \parenthesize as16}} \dalniente cs,,8\<\- s16 b'16\rest\f  }>> %m5
     r4 r16[ \dalniente \noireNH d8.\<\-] \stopStaff \hide Rest r2\p %6
     \stopStaff s2*2
     \startStaff 

@@ -77,9 +77,9 @@ accordion = \new StaffGroup = "Filip" \with{
 
     %m45
     \startStaff
-    r4 <<\relative c{d''16\rest \hide NoteHead \stemDown cs'8.
+    r4 <<\relative c{d''16\rest \hide NoteHead \dalniente \stemDown cs'8.\<
     %m46
-    c16[ g16\rest g8\rest]}
+    c16\mp[ g16\rest g8\rest]}
     \\
     \relative c{d''16\rest \doubleOctUp \hide Stem <b' cs>8.\- 
     %m46

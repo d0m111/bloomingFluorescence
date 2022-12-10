@@ -139,7 +139,7 @@ bassFlute = \new Staff = "Dimitri" \with{
     s2*3 
     \startStaff
     %57
-    \undo \hide Stem \slap \tuplet 3/2{b16-.\f\>( b16-. b16-.)} r8\! r4
+    r8 \undo \hide Stem \slap \tuplet 3/2{b16-.\f\>( b16-. b16-.)}  r4\!
     %58
     \stopStaff
     s2*7
@@ -213,7 +213,7 @@ bassFlute = \new Staff = "Dimitri" \with{
     \relative c{\hide Stem \uN b''16\f\- ^\upbow %m3
     s16 cs,8.\- ^\downbow s16 e8\rest s16 g4\rest g8\rest[ fs8\-] %m4
     s4 s16 g8\rest s16 }>> 
-    r16[ \noireNH \dalniente c'8.\p\>] \glissando \glissandoSkipOn b8[ \glissandoSkipOff \undo \hide NoteHead \naturalDown a!16\! r16] %m5
+    r16[ \noireNH \dalniente c'8.\p\>->] \glissando \glissandoSkipOn b8[ \glissandoSkipOff \undo \hide NoteHead \naturalDown a!16\! r16] %m5
     r4 r16[ \naturalUp \dalniente e'!8.\<\-] \stopStaff \hide Rest r2\p %m6
     \stopStaff s2*2
     \startStaff
