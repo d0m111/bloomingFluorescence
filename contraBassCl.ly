@@ -217,19 +217,24 @@ contraBassCl = \new Staff = "Heni" \with{
     %136
     r4 \slap cs16-.->[ r16 r8]
     %137
-    <<\relative c' {  \diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \override Stem.length = #25 <e'' f>4\-}
+    <<\relative c'{\override NoteHead.no-ledgers = ##t \hide NoteHead \diamondH \stemDown \override Stem.length = #30 \once \override NoteColumn.force-hshift = #0.5 e''4 4 
+    4 4 
+    4 4
+    4 4}
     \\
-    \relative c' { \noireNH cs,4\pp }
+    \relative c'{\override NoteHead.no-ledgers = ##t \hide Stem \hide Flag \diamondH \once \override NoteColumn.force-hshift = #0.5 <e'' f>4\- s4 
+    s4 s4
+    s4 s4
+    s4 s4 }
     \\
-    \relative c'{\noireNH \hide Stem \hide Flag s32 \override NoteHead.no-ledgers = ##t \magnifyMusic0.45{cs,32_\markup{\teeny{"bisb."}} 32 32 32 32 32 32} }>>
-    r4
+    \relative c'{\hide Stem \hide Flag \noireNH \once \override NoteColumn.force-hshift = #0.5 d,4\pp\- s4 
     %138
-    <<\relative c' {  \diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \override Stem.length = #25 <e'' f>2\-}
-    \\
-    \relative c' { \blancheNH cs,2\pp }
-    \\
-    \relative c'{\noireNH \hide Stem \hide Flag s32 \override NoteHead.no-ledgers = ##t \magnifyMusic0.45{cs,32_\markup{\teeny{"bisb."}} 32 32 32 32 32 32 32 32 32 32 32 32 32 32} }>>
-    %139-157
+    s4 s4
+    %139
+    s4 s4
+    %140
+    s4 s4 }>>
+    %141-157
     \stopStaff
     \hide Rest r2 
     \undo \hide Rest 

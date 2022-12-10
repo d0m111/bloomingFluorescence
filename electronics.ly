@@ -33,8 +33,8 @@ electro = \new Staff = "electro" \with{
     \stopStaff s2*21
     \startStaff \repeat unfold 17{b4 d}
     \stopStaff s2*5
-    \startStaff \repeat unfold 7{b4 d}
-    \stopStaff s2*18
+    \startStaff \repeat unfold 9{b4 d}
+    \stopStaff s2*16
     \startStaff \repeat unfold 4{b4 d}
     \stopStaff s2*7
     \startStaff \repeat unfold 6{b4 d}

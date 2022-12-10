@@ -252,7 +252,7 @@ bassFlute = \new Staff = "Dimitri" \with{
     %136
     r4 \tuplet 3/2{fs16-.\p\>( 16-. 16-.)} r8\!
     %137
-    \noireNH  <b' cs>4\p\- r4
+    \blancheNH  <b' cs>2\p\-
     %138
     \blancheNH \lineDashed<c,! cs>2:32\pp\- 
     %139
