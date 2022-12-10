@@ -249,23 +249,19 @@ contraBassCl = \new Staff = "Heni" \with{
     s2*8
     %169
     \startStaff
-    <<\relative c' {  \diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \override Stem.length = #25 <e'' f>4\-}
+    <<\relative c'{ \override NoteHead.no-ledgers = ##t \hide NoteHead \diamondH \stemDown \override Stem.length = #30 \once \override NoteColumn.force-hshift = #0.5 e''4 4 4 }
     \\
-    \relative c' { \noireNH cs,4\pp }
+    \relative c'{\override NoteHead.no-ledgers = ##t \hide Stem \hide Flag \diamondH \once \override NoteColumn.force-hshift = #0.5 <e'' f>4\- s4 s4}
     \\
-    \relative c'{\noireNH \hide Stem \hide Flag s32 \override NoteHead.no-ledgers = ##t \magnifyMusic0.45{cs,32_\markup{\teeny{"bisb."}} 32 32 32 32 32 32} }>> r4
+    \relative c'{\hide Stem \hide Flag \noireNH \once \override NoteColumn.force-hshift = #0.5 cs,4\pp\- s4 s4 }>>
     %170
-    r4 \lineDashed \noireNH c8:32\f\-[ r8]
+     \lineDashed \noireNH c8:32\f\-[ r8]
     %171
     r4 \uN \lineDashed b'8:32\-_\markup{\line{"[R]"}\draw-line#'(3 . 0)}[ r8]
     %172
-    r4 <<\relative c' {  \diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \override Stem.length = #25 <e'' f>4\-}
-    \\
-    \relative c' { \noireNH cs,4\pp }
-    \\
-    \relative c'{\noireNH \hide Stem \hide Flag s32 \override NoteHead.no-ledgers = ##t \magnifyMusic0.45{cs,32_\markup{\teeny{"bisb."}} 32 32 32 32 32 32} }>>
+    r4 \noireNH \dalniente cs,4\<
     %173
-    r16[ \uN ef8.\upbow--_\markup{\line{"[S]"}\draw-line#'(3 . 0)}\-] r4
+    r16\f[ \uN ef'8.\upbow--_\markup{\line{"[S]"}\draw-line#'(3 . 0)}\-] r4
     %174-181
     \stopStaff
     s2*8
