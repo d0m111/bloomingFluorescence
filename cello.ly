@@ -335,7 +335,7 @@ cello = \new Staff = "Rob" \with{
     <<
     \relative c{\hide NoteHead \diamondH \stemDown r8.[ fs16:32--^\markup{\teeny{"tremolo alla punta(serratissimo)"}}] 4:32 f4:32 16.:64[ g32\rest g8\rest]}
     \\
-    \relative c{\hide Stem \diamondH s8. fs16\-\pppp s4 s4 s16. g32\rest s8}>>
+    \relative c{\hide Stem \diamondH s8.\lineDashed fs16\-\pppp s4 s4 s16. g32\rest s8}>>
     
     %192-219
     \stopStaff
@@ -352,11 +352,11 @@ cello = \new Staff = "Rob" \with{
     \diamondH e'2\-\pp^\markup{\teeny{"legno/crine"}}
     %222
     <<
-    \relative c{\hide Stem \diamondH \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 b8\-} s16. g32\rest s8}
+    \relative c{\hide Stem \diamondH \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 \once \override NoteColumn.force-hshift = #0.5 b8\-} s16. g32\rest s8}
     \\
-    \relative c{\hide NoteHead \diamondH \stemUp \tupletUp \tuplet 3/2{r8 r8 \dalniente <c, b'>8\<} 16.[ g'32\rest\f r8]}
+    \relative c{\hide NoteHead \diamondH \stemUp \tupletUp \tuplet 3/2{r8 r8 \dalniente \once \override NoteColumn.force-hshift = #0.5 <c, b'>8\<} 16.[ g'32\rest\f r8]}
     \\
-    \relative c{\hide Stem \noireNH \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 c,8\-} s16. g'32\rest s8}
+    \relative c{\hide Stem \noireNH \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4  \once \override NoteColumn.force-hshift = #0.5 c,8\-} s16. g'32\rest s8}
     >>
     %223
     \stopStaff

@@ -190,16 +190,16 @@ contraBassCl = \new Staff = "Heni" \with{
     \startStaff 
     % \time 3/4
     \undo \hide Rest
-    <<\relative c{\hide NoteHead \blancheNH \stemDown \override Stem.length = #25 <b''' \parenthesize aqf>2\flageolet\-^\markup{\teeny {"stabilize the upper harmonics"}} b4 g,\rest}
+    <<\relative c'{\hide NoteHead \blancheNH \stemDown \override Stem.length = #35 <b''' \parenthesize aqf>2\flageolet\-^\markup{\teeny {"stabilize the upper harmonics"}} b4 g,,\rest}
     \\
-    \relative c{\hide Stem \blancheNH <d b''' aqf>2\pp\- s4 g'\rest}>>%m8
+    \relative c'{\hide Stem \blancheNH <d, b'''' aqf>2\pp\- s4 g'\rest}>>%m8
     %125
-    <<\relative c{g''8\rest \hide NoteHead \blancheNH \stemDown \override Stem.length = #25 <b' a>8\flageolet\-^\markup{\teeny {"stabilize the upper harmonics"}} <b a>4 
+    <<\relative c{g''8\rest \hide NoteHead \blancheNH \stemDown \override Stem.length = #35 <b'' a>8\flageolet\-^\markup{\teeny {"stabilize the upper harmonics"}} <b a>4 
     %126
-    <b a>8. g,16\rest}
+    <b a>8. g,,16\rest}
     \\
     %125
-    \relative c{g''8\rest \hide Stem \blancheNH <d, b''' aqf>8\pp\- s4 
+    \relative c'{g'8\rest \hide Stem \blancheNH <d, b'''' aqf>8\pp\- s4 
     %126
     s8. g'16\rest}>>r4
     %127-132
