@@ -267,11 +267,11 @@ contraBassCl = \new Staff = "Heni" \with{
     s2*8
     \startStaff
     %182
-    <<\relative c{\hide NoteHead \noireNH r8.[ b'16:32\ppp--] 8:32[ g8\rest]}
+    <<\relative c{\hide NoteHead \noireNH r8.[ b'16:32\ppp_-] 8:32[ g8\rest]}
     \\
     \relative c{\hide Stem \noireNH s8. \lineDashed b'16\- s8 g8\rest}>>
     %183
-    <<\relative c{\hide NoteHead r16[ \slap cs16-.->\f \noireNH c8:32\ppp] 8:32 \xH \slurDown c!16._._>\f^\markup{"+"}( g''32\flageolet) }
+    <<\relative c{\hide NoteHead r16[ \slap cs16-.->\f \noireNH cs8:32\ppp] 8:32 \xH \slurDown c!16._._>\f^\markup{"+"}( g''32\flageolet) }
     \\
     \relative c{\hide Stem s16 \slap cs16 \noireNH \lineDashed cs8\- s8 \xH c!16. g''32}>>
     \stopStaff
@@ -279,7 +279,7 @@ contraBassCl = \new Staff = "Heni" \with{
     s2
     %185
     \startStaff
-    <<\relative c{r8.[ \hide NoteHead \uN g'16:32--\fff\downbow_\markup{\line{"[R]"}\draw-line#'(3 . 0)}] g16:32[ g8.\rest] }
+    <<\relative c{r8.[ \hide NoteHead \uN g'16:32_-\fff\downbow_\markup{\line{"[R]"}\draw-line#'(3 . 0)}] g16:32[ g8.\rest] }
     \\
     \relative c{s8. \hide Stem \uN \lineDashed g'16\- s16 g8\rest s16}>>
     %186
@@ -289,20 +289,26 @@ contraBassCl = \new Staff = "Heni" \with{
     s2
     %188
     \startStaff
-    <<\relative c{s16 \diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \override Stem.length = #25 <e''' f>8.\-}
-    \\
-    \relative c{r16[ \noireNH ds8.\-\ppp] }>>
+    r4
     \slap cs,16-.->\mf[ r16 \uN cs8\-\downbow\f_\markup{\line{"[F]"}\draw-line#'(3 . 0)}]
     %189
     r4 \noireNH \lineDashed gs'8:32\pp\-[ r8]
     %190
     r16[ \slap fs-.->\f r8] r4
     %191
-    \stopStaff
-    s2
+    r8.
+    <<\relative c{\diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \once \override NoteColumn.force-hshift = #0.5 \override Stem.length = #25 <e''' f>16\- s4 
+    %192
+    s4}
+    \\
+    \relative c{s16 \hide Stem \omit Flag \once \override NoteColumn.force-hshift = #0.5 \override NoteHead.no-ledgers = ##t \hide NoteHead \undo \hide Stem <d e'''>4  
+    <d e'''>4 }
+    \\
+    \relative c{\once \override NoteColumn.force-hshift = #0.5 \stemDown d16\pp\- s4 s4 }>>
+    r4
     %192-219
     \stopStaff
-    s2*28
+    s2*27
 
     %220
     \startStaff
