@@ -782,9 +782,16 @@ accordion = \new StaffGroup = "Filip" \with{
     \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 \hide Stem d4\-} s16 d8\rest}>>
     %191
     s2
-    %192-219
+    %192-
+    s2
+    %193
+    \startStaff
+    <<\relative c { s8 \hide NoteHead \dalniente e,8\< \tuplet 3/2{e8[ 8\f g8\rest\!]} }
+        \\
+        \relative c{ g8\rest \hide Stem \octavaDown e8\- \omit TupletNumber \tuplet 3/2{s8 s8 \stopOctava g8\rest} }>>
+    %219
     \stopStaff
-    s2*28
+    s2*26
 
     %220
     \startStaff

@@ -306,9 +306,13 @@ contraBassCl = \new Staff = "Heni" \with{
     \\
     \relative c{\once \override NoteColumn.force-hshift = #0.5 \stemDown d16\pp\- s4 s4 }>>
     r4
-    %192-219
+    %193
+    <<\relative c{s8 \hide NoteHead \dalniente c8\< 16[ \dalniente 8\f\> d'16\rest\!] }
+    \\
+    \relative c{ g''8\rest \hide Stem c,,8\- s8. d'16\rest}>>
+    %-219
     \stopStaff
-    s2*27
+    s2*26
 
     %220
     \startStaff

@@ -336,10 +336,16 @@ cello = \new Staff = "Rob" \with{
     \relative c{\hide NoteHead \diamondH \stemDown r8.[ fs16:32--^\markup{\teeny{"tremolo alla punta(serratissimo)"}}] 4:32 f4:32 16.:64[ g32\rest g8\rest]}
     \\
     \relative c{\hide Stem \diamondH s8.\lineDashed fs16\-\pppp s4 s4 s16. g32\rest s8}>>
-    
-    %192-219
+    %193
+
+    <<\relative c{s8 \once \override NoteColumn.force-hshift = #0.5  \hide Stem \undo \hide NoteHead \diamondH b8\- \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 \dalniente s4\mp\>}}
+    \\
+    \relative c{s8 \once \override NoteColumn.force-hshift = #0.5 \stemUp \hide NoteHead \undo \hide Stem \dalniente <c, b'>8\< \tupletUp \tuplet 3/2{<c b>8 \dalniente <c b>4\>} \stopStaff \hide Rest r2\!}
+    \\
+    \relative c{ r8 \once \override NoteColumn.force-hshift = #0.5 \hide Stem \noireNH c,8\-^\markup{\teeny{"crine"}}  \omit TupletNumber \tuplet 3/2{s8 s4}}>>
+    %-219
     \stopStaff
-    s2*27
+    s2*25
 
     %220
     \startStaff

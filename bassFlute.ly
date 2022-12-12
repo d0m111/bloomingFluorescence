@@ -38,10 +38,9 @@ bassFlute = \new Staff = "Dimitri" \with{
     R2 \mark A %m1
     %m2-3
     \repeat unfold 2{
-      <<\relative c' {s8 \hide NoteHead \stemNeutral \dalniente \uN c8:32\downbow_\markup{\line{"[R]"}\draw-line#'(18 . 0)}^\markup{\teeny{"exhale"}}\< 16:32[ \dalniente 8:32\mp\> g'16\rest\!] }
+    <<\relative c' {s8 \hide NoteHead \stemNeutral \dalniente \uN c8:32\downbow_\markup{\line{"[R]"}\draw-line#'(18 . 0)}^\markup{\teeny{"exhale"}}\< 16:32[ \dalniente 8:32\mp\> g'16\rest\!] }
     \\
-    \relative c' {\hide Stem g'8\rest \uN \once \override DurationLine.style = #'dashed-line c,8\- s8. g'16\rest}>>
-    }
+    \relative c' {\hide Stem g'8\rest \uN \once \override DurationLine.style = #'dashed-line c,8\- s8. g'16\rest}>>}
     %m4-12
     \stopStaff
     s2*9 %\break
@@ -318,10 +317,18 @@ bassFlute = \new Staff = "Dimitri" \with{
     \relative c{\hide NoteHead \uN r16[ e'8:32\upbow_\markup{\line{"[R]"}\draw-line#'(2 . 0)} c16\downbow_\markup{\line{"[g]"}\draw-line#'(7 . 0)}] 8. bf'16\upbow_\markup{\line{"[sh]"}\draw-line#'(7 . 0)} b8.[ g16\rest]}
     \\
     \relative c{\hide Stem \uN s16 \lineDashed e'8\- c16\- s8. bf'16\- s8. g16\rest}>> r4
-   
-    %192-219
+
+    %192
     \stopStaff
-    s2*28 \mark K
+    s2
+    \startStaff
+    <<\relative c' {s8 \hide NoteHead \stemNeutral \dalniente \uN c8:32\downbow_\markup{\line{"[R]"}\draw-line#'(18 . 0)}^\markup{\teeny{"exhale"}}\< 16:32[ \dalniente 8:32\mp\> g'16\rest\!] }
+    \\
+    \relative c' {\hide Stem g'8\rest \uN \once \override DurationLine.style = #'dashed-line c,8\- s8. g'16\rest}>>
+    
+    %-219
+    \stopStaff
+    s2*26 \mark K
 
 
 
