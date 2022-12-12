@@ -714,7 +714,7 @@ accordion = \new StaffGroup = "Filip" \with{
     %136
     r4 \octavaDown \dalniente a4--\p\>\glissando 
     %r137
-    \magnifyMusic0.5{fs32\!} \stopOctava r8.. r4
+    \magnifyMusic0.5{fs32} \stopOctava r8..\! r4
     %138
     \octavaDown \blancheNH f2\pp--\- \stopOctava
     %139
