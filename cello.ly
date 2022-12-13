@@ -449,11 +449,11 @@ cello = \new Staff = "Rob" \with{
     \startStaff 
     r4^\markup{\teeny{"crine"}}
     <<
-    \relative c{\hide NoteHead \stemUp  d8\rest[ \dalniente <c, b'>8^\markup{\teeny{"crine/legno (hyper slow bowing"}}]\< \dalniente 8\p\>[ d'8\rest\!]}
+    \relative c{\hide NoteHead \stemUp  d8\rest[ \dalniente \once \override NoteColumn.force-hshift = #0.5 <c, b'>8^\markup{\teeny{"crine/legno (hyper slow bowing"}}]\< \dalniente 8\p\>[ d'8\rest\!]}
     \\
-    \relative c{ \hide Stem \blancheNH s8 c,4\-\pp d'8\rest}
+    \relative c{ \hide Stem \blancheNH s8 \once \override NoteColumn.force-hshift = #0.5 c,4\-\pp d'8\rest}
     \\
-    \relative c{ \hide Stem \diamondH s8 b4\- d8\rest}
+    \relative c{ \hide Stem \diamondH s8 \once \override NoteColumn.force-hshift = #0.5 b4\- d8\rest}
     >> r4
     %301 
     \stopStaff

@@ -378,11 +378,18 @@ contraBassCl = \new Staff = "Heni" \with{
 
     %270
     \startStaff
-    <<\relative c' {\diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \override Stem.length = #25 <e'' f>8.\-}
+    <<\relative c' {\diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \once \override NoteColumn.force-hshift = #0.5 \override Stem.length = #25  <e'' f>2\- s2}
     \\
-    \relative c' {\noireNH fs,8.\-\ppp[ g'16\rest] }>>
-    r4
-    r4 \tuplet 3/2{\uN \lineDashed b,4:32\downbow\mp_\markup{\line{"[R]"}\draw-line#'(4 . 0)}\- r8}
+    \relative c'{s4 
+        \hide NoteHead 
+        \once \override NoteColumn.force-hshift = #0.5 
+        \override NoteHead.no-ledgers = ##t  <fs, e''' f>4  <f e''' f>4 4 }
+    \\
+    \relative c' {\noireNH \stemDown \once \override NoteColumn.force-hshift = #0.5 fs,4\-\ppp s4
+    s2 }>>
+    % r4
+    % R2
+    % r4 \tuplet 3/2{\uN \lineDashed b,4:32\downbow\mp_\markup{\line{"[R]"}\draw-line#'(4 . 0)}\- r8}
     r8[ \slap g16-.\mp r16] r8[ r32 \uN \lineDashed e16.\downbow\mf--\-_\markup{\line{"[R]"}\draw-line#'(4 . 0)} ]
     f'8\upbow_\markup{\line{"[F]"}\draw-line#'(8 . 0)}[ r8] r4 \stopStaff
     
@@ -398,7 +405,7 @@ contraBassCl = \new Staff = "Heni" \with{
     <<\relative c'{\hide NoteHead \uN \tuplet 5/4{ g'16\rest[ g\rest g\rest g,8:32\downbow\mp_\markup{\line{"[R]"}\draw-line#'(4 . 0)}_-]} 16[ g'8.\rest] }
     \\
     \relative c'{\hide Stem \omit TupletBracket \omit TupletNumber \uN \tuplet 5/4{ g'16\rest s8 \lineDashed g,8\-} s16 g'8\rest s16}>>
-    g'8.\rest[ \xH c,,32-.->(^\markup{\teeny{"+"}} g''32\flageolet)] \slap c,,16-.\p[ r16 f-. r16]
+    g'8.\rest[ \xH c,,32\f-.->(^\markup{\teeny{"+"}} g''32\flageolet)] \slap c,,16-.\p[ r16 f-. r16]
     r4 \tuplet 5/4{r16[ a-.\p r16 fs-. r16]}
     \stopStaff s2
     \startStaff 
@@ -408,7 +415,7 @@ contraBassCl = \new Staff = "Heni" \with{
     \stopStaff s2*9
     %299
     \startStaff
-    r4 <<\relative c'{\hide NoteHead \noireNH g'8\rest[ \dalniente cs,,8\<] \dalniente c8\ppp\>[ g''8\rest\!]}
+    r4 <<\relative c'{\hide NoteHead \noireNH g'8\rest[ \dalniente cs,,8\<] \dalniente c8\f\>[ g''8\rest\!]}
     \\
     \relative c'{\hide Stem \noireNH g'8\rest cs,,8\- s8 g''8\rest}>>
     r4 

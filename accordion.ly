@@ -203,7 +203,7 @@ accordion = \new StaffGroup = "Filip" \with{
     \startStaff
     \override Staff.StaffSymbol.line-count =#2
     \override Staff.StaffSymbol.line-positions = #'(-8 8)
-    \stemDown r32[^\markup{\teeny \box{"key noise cluster (close/open action)"}} \override NoteHead.no-ledgers = ##t \xH <d, g'''>16^\markup{\teeny{"+"}}->(\fff 32-.\flageolet) ]
+    \stemDown r32[^\markup{\teeny \box{"key noise cluster (close/open action)"}} \override NoteHead.no-ledgers = ##t \xH <d' g'''>16^\markup{\teeny{"+"}}->(\fff 32-.\flageolet) ]
     r8 r4
     %253-254
     \stopStaff
@@ -215,7 +215,7 @@ accordion = \new StaffGroup = "Filip" \with{
     s2
     \startStaff
     r4 r16[\xH d,8.\glissando\f^\markup{\teeny{"come prima"}}]
-    \glissandoSkipOn f'16[ \glissandoSkipOff \undo \hide NoteHead g16 r8] r4 \pageBreak
+    \glissandoSkipOn e'16[ \glissandoSkipOff \undo \hide NoteHead \once \override NoteHead.no-ledgers = ##t g16 r8] r4 \pageBreak
     \stemDown \override NoteHead.no-ledgers = ##t \tuplet 3/2{r8^\markup{\teeny{"come prima"}}[ \xH <d,, g'''>8-.->\f(^\markup{\teeny{"+"}} <d g'''>8-.\flageolet)]}
     % \\
     % \relative c{\hide Stem \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 \makeClusters<e, f'>8 \makeClusters<e, f'>8 s16}}
@@ -224,9 +224,9 @@ accordion = \new StaffGroup = "Filip" \with{
     %261
     s2
     %262
-    <<\relative c{\repeat unfold 2{d8\rest[ \hide NoteHead \uN d32-> d32-> d32-> d32->]}}
+    <<\relative c{\repeat unfold 2{d8\rest[ \hide NoteHead \uN \override NoteHead.no-ledgers = ##t d32-> d32-> d32-> d32->]}}
     \\
-    \relative c{\repeat unfold 2{ d8\rest[ \uN d8\-\f]}}>>
+    \relative c{\repeat unfold 2{ d8\rest[ \uN \override NoteHead.no-ledgers = ##t d8\-\f]}}>>
     %263
     <<\relative c{d8\rest d16\rest \hide NoteHead \uN d32->[ d32-> ] d32->[ d32->] d16\rest d8\rest}
     \\

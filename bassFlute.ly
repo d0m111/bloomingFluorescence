@@ -382,12 +382,12 @@ bassFlute = \new Staff = "Dimitri" \with{
     s2
     \startStaff
     %257
-    <<\relative c{g''16\rest[ \hide NoteHead \xH c,32->-.\f \uN b'32\upbow\p_\markup{\line{"[F]"}\draw-line#'(13 . 0)} 8] \tuplet 5/4{8.[ cs,8]} 
+    <<\relative c{g''16\rest[ \hide NoteHead \xH c,32->-.\f \uN b'32\upbow\p_\markup{\line{"[F]"}\draw-line#'(10 . 0)} 8] \tuplet 5/4{8.[ cs,8_\markup{\line{"[g]"}\draw-line#'(7 . 0)}]\downbow} 
     %258
     c16[ g'8.\rest]}
     \\
     %257
-    \relative c{\hide Stem g''16\rest  \xH c,32 \uN b'32\- s8 \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8. cs,8\-} 
+    \relative c{\hide Stem g''16\rest  \xH c,32 \uN b'32\- s8 \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8. cs,8\- } 
     %258
     s16 g'8\rest s16 }>> r4
     %259

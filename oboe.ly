@@ -366,9 +366,9 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     %255
     r8 r16 \tuplet 3/2{b16-.\mp cs-. ds-.} r16 r8 \pageBreak
     r4 \tuplet 3/2{bf16-.\mp c-. d-.} r8 
-    r4 <<\relative c{\hide NoteHead \uN \tuplet 5/4{g''8\rest[ g16\rest a8]} 8. fs16:64 16 d16\rest d16\rest \undo \hide NoteHead \tuplet 3/2{\slap d16-.\f e-. fs-.} \hide NoteHead \uN cs8.\downbow}
+    r4 <<\relative c{\hide NoteHead \uN \tuplet 5/4{g''8\rest[ g16\rest a8]} 8. fs16:64_\markup{\line{"[F]"}\draw-line#'(7 . 0)} \downbow 16 d16\rest d16\rest \undo \hide NoteHead \tuplet 3/2{\slap d16-.\f e-. fs-.} \hide NoteHead \uN cs8.\downbow}
     \\
-    \relative c{\hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 5/4{ g''8\rest g16\rest a8\-} s8. fs16\- s16 d16\rest d16\rest s8 cs8.\- }>> r4
+    \relative c{\hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 5/4{ g''8\rest g16\rest a8\-_\markup{\line{"[S]"}\draw-line#'(8 . 0)} \upbow} s8. fs16\- s16 d16\rest d16\rest s8 cs8.\- }>> r4
     %260
     \stopStaff s2*2
     \startStaff %262
@@ -409,7 +409,7 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     \\
     \relative c'{\hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 3/2{g'8\rest a4\-} s16 g8\rest s16} >>
     r4 \tuplet 5/4{\slap d16-.\p\> e-. fs-. gs-. as-.}
-    r4\! <<\relative c'{\hide NoteHead \uN g'16\rest[ d8.--\downbow_\markup{\line{"[g]"}\draw-line#'(8 . 0)}] 4 4 16[ a8.--\upbow_\markup{\line{"[F]"}\draw-line#'(8 . 0)}]}
+    r4\! <<\relative c'{\hide NoteHead \uN g'16\rest[ d8._-\downbow_\markup{\line{"[g]"}\draw-line#'(8 . 0)}] 4 4 16[ a8._-\upbow_\markup{\line{"[F]"}\draw-line#'(8 . 0)}]}
     \\
     \relative c'{\hide Stem \uN g'16\rest d8.\- s2 s16 a8.\- }
     >>
