@@ -832,7 +832,7 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
   \tuplet 3/2{8 \uN 16-. b16\rest b8\rest}}
   \\
   \relative c''{\hide Stem s8. \uN b16\- s16 \uNw 16 b8\rest
-  s4.. \uN b16
+  s4.. \uN b16\-
   \omit TupletBracket \omit TupletNumber \tuplet3/2{s8 \uNw16 b16\rest b8\rest}}>> r4 \stopStaff 
   s2*7 \startStaff
   %281

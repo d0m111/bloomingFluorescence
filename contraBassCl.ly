@@ -390,11 +390,31 @@ contraBassCl = \new Staff = "Heni" \with{
     % r4
     % R2
     % r4 \tuplet 3/2{\uN \lineDashed b,4:32\downbow\mp_\markup{\line{"[R]"}\draw-line#'(4 . 0)}\- r8}
-    r8[ \slap g16-.\mp r16] r8[ r32 \uN \lineDashed e16.\downbow\mf--\-_\markup{\line{"[R]"}\draw-line#'(4 . 0)} ]
-    f'8\upbow_\markup{\line{"[F]"}\draw-line#'(8 . 0)}[ r8] r4 \stopStaff
+    r8[ \slap g,16-.\mp r16] r8[ r32 \uN \lineDashed e16.\downbow\mf--\-_\markup{\line{"[R]"}\draw-line#'(4 . 0)} ]
+    f'8\upbow_\markup{\line{"[F]"}\draw-line#'(8 . 0)}[ r8] 
+    <<\relative c' {\diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \once \override NoteColumn.force-hshift = #0.5 \override Stem.length = #25  <e'' f>4\- 
+    %274
+    s2
+    %275
+    s4.}
+    \\
+    \relative c'{s4 
+    %274
+        \hide NoteHead 
+        \once \override NoteColumn.force-hshift = #0.5 
+        \override NoteHead.no-ledgers = ##t  <c, e''' f>4  <c e''' f>4 
+        %275
+        4 8 r8 }
+    \\
+    \relative c' {\noireNH \stemDown \once \override NoteColumn.force-hshift = #0.5 cs,4\-\ppp 
+    %274 
+    s2
+    s4.  }>> 
+    
+    \stopStaff
     
     %274-280
-    s2*7
+    s2*5
 
     %281
     \startStaff

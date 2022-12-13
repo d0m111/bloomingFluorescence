@@ -241,7 +241,7 @@ accordion = \new StaffGroup = "Filip" \with{
     \override Staff.StaffSymbol.line-positions = #'(-4 -2 0 2 4)
     <<\relative c'{ \stemDown \hide NoteHead \noireNH \dalniente f''8\< \dalniente 8\pp\> 16[ g,8.\rest\!]
     g,4\rest g'16\rest[\dalniente f'8.\<] \dalniente 8\pp\>[ g,8\rest\!] g4\rest
-    \tupletDown \tuplet 3/2{ g8\rest[ g8\rest \dalniente f'8\<]} \dalniente 8\pp\> 8
+    \tupletDown \tuplet 3/2{ g8\rest[ g8\rest \dalniente f'8\<]} \dalniente 8 \dalniente 8\pp\>
     \stopStaff \hide Rest b,,2\rest\!}
     \\
     \relative c'{ \hide Stem \noireNH  f''4\- s16 g,8\rest s16 
