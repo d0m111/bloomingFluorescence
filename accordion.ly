@@ -188,7 +188,7 @@ accordion = \new StaffGroup = "Filip" \with{
     \clef treble
     r4 <<\relative c{\stemDown \hide NoteHead g''8\rest[  c?8] 4 4 4 4 16[ g8.\rest]}
     \\
-    \relative c{g''8\rest \hide Stem c?8\- s1 s16 g8\rest s16}>>
+    \relative c{g''8\rest \hide Stem c?8\ppp\- s1 s16 g8\rest s16}>>
     r4
     %240
     \stopStaff
