@@ -1,11 +1,11 @@
-\version "2.24.0"
+\version "2.20.0"
 \language "english"
 
 %dynamics
 expo = \once \override Hairpin.stencil = #flared-hairpin  
 dalniente = \once \override Hairpin.circled-tip = ##t 
 dalNienteExpo = { \once   \override Hairpin.stencil = #flared-hairpin
- \once  \override Hairpin.circled-tip = ##t }
+ \once  \override Hairpin #'circled-tip = ##t }
 %CRESCENDO expo+dal niente (don't touch this massive code)
 #(define-public ((elbowed-hairpin coords mirrored?) grob)
  (define (pair-to-list pair)

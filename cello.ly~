@@ -1,4 +1,4 @@
-\version "2.24.0"
+\version "2.22.2"
 \language "english"
 
 \include "accidentals.ly"
@@ -284,7 +284,7 @@ cello = \new Staff = "Rob" \with{
     \relative c{\hide Stem \diamondH \lineDashed d'4\ppppp\- s4}>>
     b,8^\markup{\teeny{"pizz."}}\laissezVibrer[ r8]
     %172
-    r4 \clef treble \lineDashed \uN d''4\pp^\markup{\teeny{"crine"}}--\-
+    r4 \clef treble \lineDashed \uN d''4\pp--\-
     %173
      \stopStaff \hide Rest r2
     %174-178
@@ -345,16 +345,7 @@ cello = \new Staff = "Rob" \with{
     \relative c{ r8 \once \override NoteColumn.force-hshift = #0.5 \hide Stem \noireNH c,8\-^\markup{\teeny{"crine"}}  \omit TupletNumber \tuplet 3/2{s8 s4}}>>
     %-219
     \stopStaff
-    s2*9
-    \startStaff
-    r4 
-    <<\relative c{s8 \once \override NoteColumn.force-hshift = #0.5  \hide Stem \undo \hide NoteHead \diamondH b8\- \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 \dalniente s4\mp\>}}
-    \\
-    \relative c{s8 \once \override NoteColumn.force-hshift = #0.5 \stemUp \hide NoteHead \undo \hide Stem \dalniente <c, b'>8\< \tupletUp \tuplet 3/2{<c b>8 \dalniente <c b>4\>} d'4\rest\!}
-    \\
-    \relative c{ d8\rest \once \override NoteColumn.force-hshift = #0.5 \hide Stem \noireNH c,8\-^\markup{\teeny{"crine"}}  \omit TupletNumber \tuplet 3/2{s8 s4} }>> 
-    \stopStaff
-    s2*14
+    s2*25
 
     %220
     \startStaff

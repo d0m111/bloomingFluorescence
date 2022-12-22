@@ -1,4 +1,4 @@
-\version "2.24.0"
+\version "2.22.2"
 \language "english"
 
 \include "accidentals.ly"
@@ -308,29 +308,20 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     \relative c{\noireNH r8[ <a'' b c' e>8]\ppp\- s8 \hide Stem  g8\rest }>>
     \stopStaff
     %184
-    s2
-    \startStaff
-    %185
-    r4 <<\relative c'{\stemDown \hide NoteHead <d' a'>\ppp\flageolet 4}
-    \\
-    \relative c'{\hide Stem <d' a'>4\- s4}>>
-    %186 2nd half of the measure
-    r4 
-    %187
-    \stopStaff s2
+    s2*4
     %188
     \startStaff
-    r16[ dqs,8.--\p\-] r4 %\break
+    r16[ dqs,8.--\p] r4 %\break
     %189
-    r4 aqs'8--\p\-[ r8]
+    r4 aqs'8--\p[ r8]
     %190 
     \stopStaff
     s2
     %191
     \startStaff
-    <<\relative c{\hide NoteHead \noireNH r8.[ f'16] f8[ g8\rest]}
+    <<\relative c{\hide NoteHead \noireNH r8.[ f'16] f8[ d8\rest]}
     \\
-    \relative c{\hide Stem s8. \sharpDown fs'16\- s8 g8\rest^\markup{\teeny \box \bold{"reed OFF"}}}>>
+    \relative c{\hide Stem s8. \sharpDown fs'16\- s8 d8\rest}>>
     %192-219
     \stopStaff
     s2*28

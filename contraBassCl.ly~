@@ -1,4 +1,4 @@
-\version "2.24.0"
+\version "2.22.2"
 \language "english"
 
 \include "accidentals.ly"
@@ -315,15 +315,7 @@ contraBassCl = \new Staff = "Heni" \with{
     \relative c{ g''8\rest \hide Stem c,,8\- s8. d'16\rest}>>
     %-219
     \stopStaff
-    s2*10
-    \startStaff
-    % j1
-    r4
-    <<\relative c{s8 \hide NoteHead \dalniente c8\< 16[ \dalniente 8\f\> d'16\rest\!] }
-    \\
-    \relative c{ g''8\rest \hide Stem c,,8\- s8. d'16\rest}>> r4
-    \stopStaff
-    s2*14
+    s2*26
 
     %220
     \startStaff

@@ -1,4 +1,4 @@
-\version "2.24.0"
+\version "2.20.0"
 \language "english"
 
 uN = #(define-music-function
@@ -93,7 +93,7 @@ punta = #(define-music-function
          (ly:music?)
          #{
            \override NoteHead.stencil = #ly:text-interface::print
-           \override NoteHead.text = \markup \musicglyph "noteheads.s2tiThin"
+           \override NoteHead.text = \markup \musicglyph "noteheads.d2tiThin"
            % 
            #note
          #} ) 
