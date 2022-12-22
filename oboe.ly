@@ -333,7 +333,11 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     \relative c{\hide Stem s8. \sharpDown fs'16\- s8 g8\rest^\markup{\teeny \box \bold{"reed OFF"}}}>>
     %192-219
     \stopStaff
-    s2*28
+    s2*12
+    \startStaff
+    r4 r8 \uN \dalniente d,32\<_\markup{\line{"[F]"}\draw-line#'(15 . 0)}(ds e f fs g gs a\f) r8 r4
+    \stopStaff
+    s2*14
 
 
 
@@ -803,7 +807,14 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
   <<\relative c''{\hide NoteHead b8.\rest[ b16] 8[ 16-. b16\rest]}
   \\
   \relative c''{\hide Stem s8. \uN b16\- s8 \uNw 16 b16\rest}>> \stopStaff 
-  s2*28
+  s2*12
+  \startStaff
+  r4
+  <<\relative c''{\hide NoteHead \uN b8\rest[ b8] \uNw 16-.[ b8.\rest]}
+  \\
+  \relative c''{\hide Stem \uN s8 b8\- \uNw 16 b16\rest s8 }>> r4
+  \stopStaff
+  s2*14
   \startStaff
   %220
   <<\relative c''{\hide NoteHead b8.\rest[ b16] 8[ 16-. b16\rest]

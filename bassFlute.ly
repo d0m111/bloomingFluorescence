@@ -148,7 +148,7 @@ bassFlute = \new Staff = "Dimitri" \with{
   \startStaff \undo \hide Rest
   r16 \tuplet 3/2{ \slap d16-.\f\>( d16-. d16-.)} r16\! r16[ \uN \dalniente a'8.\-\<]
   %53
-  r4\mp r8[ r32 \noireNH \dalniente bf16\p\>]\glissando \grace \hide Stem  \magnifyMusic 0.5 { \parenthesize a32\!}
+  r4\mp r8[ r32 \noireNH \dalniente bf16\p\>]\glissando \grace \hide Stem  \magnifyMusic 0.5 {a32\!}
   %54-56
   \stopStaff
   s2*3
@@ -959,7 +959,7 @@ bassFlute = \new Staff = "Dimitri" \with{
 
 
 
-%\score{\bassFlute}
+% \score{\bassFlute}
 
 \layout {
 
