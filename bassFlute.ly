@@ -397,7 +397,18 @@ bassFlute = \new Staff = "Dimitri" \with{
   >>
   r4
   \stopStaff
-  s2*14 \mark K
+  s2*2
+  \startStaff
+  r4 <<\relative c'{ \hide NoteHead \uN g'8\rest[ g16\rest a16_-\downbow]_\markup{\line{"[g]"}\draw-line#'(8 . 0)}
+                     8[ g8\rest] g4\rest
+                     d4:32_-_\markup{\line{"[R]"}\draw-line#'(8 . 0)}\downbow g4\rest}
+       \\
+       \relative c'{\hide Stem \uN s8. a'16\- s8 g8\rest s4
+                    \lineDashed d4\- g4\rest}>>
+  r4 r8 \tuplet 3/2{\dalniente \uN cs16:32\<( ds16:32 f!16:32}
+  \tuplet 3/2{\dalniente g16:32\f\> a16:32 b16:32)} r8\! r4
+  \stopStaff
+  s2*7 \mark K
 
 
 

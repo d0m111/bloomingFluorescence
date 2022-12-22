@@ -350,11 +350,17 @@ cello = \new Staff = "Rob" \with{
     r4 
     <<\relative c{s8 \once \override NoteColumn.force-hshift = #0.5  \hide Stem \undo \hide NoteHead \diamondH b8\- \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 \dalniente s4\mp\>}}
     \\
-    \relative c{s8 \once \override NoteColumn.force-hshift = #0.5 \stemUp \hide NoteHead \undo \hide Stem \dalniente <c, b'>8\< \tupletUp \tuplet 3/2{<c b>8 \dalniente <c b>4\>} d'4\rest\!}
+    \relative c{s8 \once \override NoteColumn.force-hshift = #0.5 \stemUp \hide NoteHead \undo \hide Stem \dalniente <c, b'>8\< \tupletUp \tuplet 3/2{<c b>8 \dalniente <c b>4\mp\>} d'4\rest\!}
     \\
     \relative c{ d8\rest \once \override NoteColumn.force-hshift = #0.5 \hide Stem \noireNH c,8\-^\markup{\teeny{"crine"}}  \omit TupletNumber \tuplet 3/2{s8 s4} }>> 
     \stopStaff
-    s2*14
+    s2*3 \startStaff
+    \clef treble r4 r8[ \lineDashed \uN d'8\-\mp]
+    \clef bass \diamondN \dalniente fs,,4\< r4\f
+    a8^\markup{\teeny{"pizz."}}\laissezVibrer\mp  r8 r4 
+    \dalniente \noireNH c,,8.\-\<^\markup{\teeny{"crine"}}[ r16\f] r4 \stopStaff
+    
+    s2*7
 
     %220
     \startStaff
@@ -364,10 +370,10 @@ cello = \new Staff = "Rob" \with{
     \relative c{\hide Stem \uN  s8. \lineDashed cs''16\- s8 g\rest}>>
     %221
     \clef bass
-    \diamondH e'2\-\pp^\markup{\teeny{"legno/crine"}}
+    \diamondH \lineDashed e'2\-\pp^\markup{\teeny{"legno/crine"}}
     %222
     <<
-    \relative c{\hide Stem \diamondH \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 \once \override NoteColumn.force-hshift = #0.5 b8\-} s16. g32\rest s8}
+    \relative c{\hide Stem \diamondH \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 \once \override NoteColumn.force-hshift = #0.5 b8\-^\markup{\teeny{"crine"}}} s16. g32\rest s8}
     \\
     \relative c{\hide NoteHead \diamondH \stemUp \tupletUp \tuplet 3/2{r8 r8 \dalniente \once \override NoteColumn.force-hshift = #0.5 <c, b'>8\<} 16.[ g'32\rest\f r8]}
     \\

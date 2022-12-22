@@ -337,7 +337,24 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     \startStaff
     r4 r8 \uN \dalniente d,32\<_\markup{\line{"[F]"}\draw-line#'(15 . 0)}(ds e f fs g gs a\f) r8 r4
     \stopStaff
-    s2*14
+    s2*2
+    \startStaff
+    %208
+    r4 \uN fs8.\mf_-\-_\markup{\line{"[F]"}\draw-line#'(7 . 0)}\downbow[ r16] 
+    r8 \slap \tuplet 3/2{b,16-.\> cs-. ds-.} 
+    \tuplet 3/2{f!16-. g a} r8\!
+    \stopStaff
+    %210
+    s2
+    \startStaff
+    <<\relative c'{\hide NoteHead \uN
+                   a'4_\markup{\line{"[F]"}\draw-line#'(27 . 0)}\downbow 4
+                   8[ g8\rest] g4\rest^\markup{\teeny \box \bold{"reed ON"}}}
+      \\
+      \relative c'{\hide Stem \uN a'4\mf_-\- s4 
+                   s8 g8\rest s4}>>
+    \stopStaff
+    s2*7
 
 
 
@@ -814,10 +831,17 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
   \\
   \relative c''{\hide Stem \uN s8 b8\- \uNw 16 b16\rest s8 }>> r4
   \stopStaff
-  s2*14
+  s2*2
+  \startStaff \stemUp
+  r4 \uN b8.\-[ \uNw b16_.] \stopStaff
+  s2*2
+  \startStaff \stemUp
+  \uN b8\-[ \uNw b16_. r16] r4 \stopStaff
+   
+  s2*8
   \startStaff
   %220
-  <<\relative c''{\hide NoteHead b8.\rest[ b16] 8[ 16-. b16\rest]
+  <<\relative c''{\hide NoteHead b8.\rest[ b16] 8[ 16_. b16\rest]
   r4 \tuplet 3/2{b8\rest b4}
   16[ b16-. b8\rest] b4\rest}
   \\

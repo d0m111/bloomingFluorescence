@@ -323,7 +323,12 @@ contraBassCl = \new Staff = "Heni" \with{
     \\
     \relative c{ g''8\rest \hide Stem c,,8\- s8. d'16\rest}>> r4
     \stopStaff
-    s2*14
+    s2*3
+    \startStaff
+    r16[ \slap cs16-.\f^\markup{\teeny{"slap"}} r8] \tuplet 3/2{r16 ds16-.\> f16-.} \tuplet 3/2{g16-. a16-. b-.\!} \stopStaff
+    s2*2 \startStaff
+    \noireNH \lineDashed \dalniente gs8.:32\<\-[ r16\f] r4 \stopStaff
+    s2*7
 
     %220
     \startStaff

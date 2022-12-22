@@ -797,7 +797,15 @@ accordion = \new StaffGroup = "Filip" \with{
     <<\relative c { s8 \hide NoteHead \dalniente e,8\< \tuplet 3/2{e8[ 8\f g8\rest\!]} }
         \\
         \relative c{ g8\rest \hide Stem \octavaDown e8\- \omit TupletNumber \tuplet 3/2{s8 s8 \stopOctava g8\rest} }>> r4
-    \stopStaff s2*14
+    \stopStaff 
+    s2*4 \startStaff
+    <<\relative c{\hide NoteHead \uN  \tuplet 5/4{<fs, b>16->[ <fs b>16-> <fs b>16-> <fs b>16-> <fs b>16->] } d'4\rest}
+    \\
+    \relative c{ \makeClusters{<fs, b>4\mf[ <fs b>16] } s8.}>>  \stopStaff
+    s2
+    \startStaff
+    \noireNH \octavaDown \dalniente fs,4--\mp\> \glissando \glissandoSkipOn f!8[ \glissandoSkipOff e16 r16\!] \stopOctava \stopStaff
+    s2*7
 
     %220
     \startStaff
