@@ -30,7 +30,9 @@ electro = \new Staff = "electro" \with{
     \repeat unfold 14{b4 d} %\break
     \stopStaff s2*6
     \startStaff \repeat unfold 25{b4 d}
-    \stopStaff s2*21
+    \stopStaff s2*5
+    \startStaff \repeat unfold 4 {b4 d}
+    \stopStaff s2*12
     \startStaff \repeat unfold 17{b4 d}
     \stopStaff s2*5
     \startStaff \repeat unfold 9{b4 d}
@@ -59,8 +61,10 @@ electro = \new Staff = "electro" \with{
     \stopStaff s2*14
     \startStaff \repeat unfold 12 {b4 d}
     \stopStaff s2*18
-    \startStaff \repeat unfold 64 {b4 d}
-    \stopStaff s2*24
+    \startStaff \repeat unfold 44 {b4 d}
+    \stopStaff s2*18
+    \startStaff \repeat unfold 5{b4 d}
+    \stopStaff s2*21
     \startStaff \repeat unfold 9 {b4 d}
     \stopStaff s2*3
     \startStaff \repeat unfold 7 {b4 d}

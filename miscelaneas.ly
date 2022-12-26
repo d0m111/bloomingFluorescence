@@ -4,13 +4,19 @@
 
 
 % octavation
-octavaUp = { \set Staff.ottavation = "8va"
+octavaUp = { 
+  \ottava 1
+  \set Staff.ottavation = "8va"
   \once \override Staff.OttavaBracket.direction = #UP }
-doubleOctUp = { \set Staff.ottavation = "15ma"
+doubleOctUp = { 
+  \ottava 2
+  \set Staff.ottavation = "15ma"
   \once \override Staff.OttavaBracket.direction = #UP }
-octavaDown = { \set Staff.ottavation = "8vb"
+octavaDown = { 
+  \ottava -1
+  \set Staff.ottavation = "8vb"
   \once \override Staff.OttavaBracket.direction = #DOWN }
-stopOctava = \unset Staff.ottavation
+stopOctava = \ottava 0 %\unset Staff.ottavation
   
 
 % fonts
