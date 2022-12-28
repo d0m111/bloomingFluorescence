@@ -19,7 +19,8 @@ electro = \new Staff = "electro" \with{
     \clef percussion
 
     \xH
-    \repeat unfold 3{b'4 d4}
+    b'4^\markup{\bold \box{"Play video"}} d
+    \repeat unfold 2{b4 d4}
     \stopStaff s2*8 %\break
     \startStaff \repeat unfold 6{b4 d4} %\break 
     \stopStaff s2*4
@@ -71,9 +72,11 @@ electro = \new Staff = "electro" \with{
     \stopStaff s2*3
     \startStaff \repeat unfold 21 {b4 d}
     \stopStaff s2*3
-    \startStaff \repeat unfold 31 {b4 d}
-    \stopStaff s2*18
+    \startStaff \repeat unfold 38 {b4 d}
+    \stopStaff s2*11
     \startStaff \repeat unfold 20 {b4 d}
+    \stopStaff s2*2
+    \hide Rest r2^\markup{\bold \box{"video fade out in silence"}}
   
 }
 

@@ -52,14 +52,17 @@ bassFlute = \new Staff = "Dimitri" \with{
   \startStaff
   <<
     \relative c{
-      \hide NoteHead \slap \tuplet 3/2{b''16-.^\markup{\teeny {"tongue ram (ricochet effect)"}} 16-. 16-.} cs,16_>_.[ cs16]\downbow cs8 b'8\upbow
+       \slap \stemDown \tuplet 3/2{b''16-.^\markup{\teeny {"tongue ram (ricochet effect)"}} 16-. 16-.} \stemNeutral \hide NoteHead cs,16_>_.[ cs16]\downbow cs8 b'8\upbow
       %m14
       b16[ g16\rest g8\rest] s4
     }
     \\
     \relative c{
       \autoBeamOff
-      \mark B \slap b''8-.->  \hide Stem cs,16 \uN cs16_\markup{\line{"[F]"}\draw-line#'(10 . 0)}\mp\- s8 b'8_\markup{\line{"[S]"}\draw-line#'(10 . 0)}\fff^\markup{\teeny{"inhale"}}\-
+      \mark B 
+      s8 %\slap b''8-.-> 
+      \hide Stem 
+      \slap cs'16 \uN cs16_\markup{\line{"[F]"}\draw-line#'(10 . 0)}\mp\- s8 b'8_\markup{\line{"[S]"}\draw-line#'(10 . 0)}\fff^\markup{\teeny{"inhale"}}\-
       %m14
       s16 g16\rest g8\rest g4\rest
     }
@@ -476,14 +479,14 @@ bassFlute = \new Staff = "Dimitri" \with{
   %257
   <<
     \relative c{
-      g''16\rest[ \hide NoteHead \xH c,32->-.\f \uN b'32\upbow\p_\markup{\line{"[F]"}\draw-line#'(10 . 0)} 8] \tuplet 5/4{8.[ cs,8_\markup{\line{"[g]"}\draw-line#'(7 . 0)}]\downbow}
+      g''16\rest[ \hide NoteHead \xH c,32_>_.\f \uN b'32_-\upbow\p_\markup{\line{"[F]"}\draw-line#'(10 . 0)} 8] \tuplet 5/4{8.[ cs,8_\markup{\line{"[g]"}\draw-line#'(7 . 0)}]\downbow}
       %258
       c16[ g'8.\rest]
     }
     \\
     %257
     \relative c{
-      \hide Stem g''16\rest  \xH c,32 \uN b'32\- s8 \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8. cs,8\- }
+      \hide Stem g''16\rest  \xH c,32 \uN  b'32\- s8 \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8. cs,8--\- }
       %258
       s16 g'8\rest s16
     }
@@ -497,11 +500,11 @@ bassFlute = \new Staff = "Dimitri" \with{
   %261
   <<
     \relative c{
-      g''16.\rest[ \uN \hide NoteHead c,32:64\upbow_\markup{\line{"[R]"}\draw-line#'(10 . 0)} c8:32] 16:32[ g'8.\rest]
+      g''16.\rest[ \uN \hide NoteHead c,32:64_-\fff\upbow_\markup{\line{"[R]"}\draw-line#'(10 . 0)} c8:32] 16:32[ g'8.\rest]
       %262
-      \repeat unfold 2{ \stemDown g8\rest[ cs8]\upbow_\markup{\line{"[S]"}\draw-line#'(8 . 0)}}
+      \repeat unfold 2{ \stemDown g8\rest[ cs8]_-\upbow_\markup{\line{"[S]"}\draw-line#'(8 . 0)}}
       %263
-      g8.\rest[ cs16\upbow_\markup{\line{"[S]"}\draw-line#'(8 . 0)}] 16[ g8.\rest]
+      g8.\rest[ cs16_-\upbow_\markup{\line{"[S]"}\draw-line#'(8 . 0)}] 16[ g8.\rest]
     }
     \\
     %261
@@ -520,8 +523,8 @@ bassFlute = \new Staff = "Dimitri" \with{
 
   %273
   \startStaff
-  \tuplet 3/2{\uN \lineDashed cs8:32--\-[_\markup{\line{"[R]"}\draw-line#'(8 . 0)} r8 r8]} r4
-  r4 r16[ \naturalUp \noireNH  f''!8.\-\p]
+  \tuplet 3/2{\uN \lineDashed cs8:32--\-[_\markup{\line{"[R]"}\draw-line#'(8 . 0)}\downbow r8 r8]} r4
+  r4 r16[ \naturalUp \noireNH  f''!8.--\-\p]
   r4\! \slap \tuplet 3/2{f,,16-.\mp\>[ 16-. 16-.]} r8\!
   \stopStaff
 
@@ -534,7 +537,7 @@ bassFlute = \new Staff = "Dimitri" \with{
   <<
     \relative c'{\hide NoteHead \uN g'8\rest[ f8:32_-_\markup{\line{"[R]"}\draw-line#'(5 . 0)}] 16[ g8.\rest]}
     \\
-    \relative c'{\hide Stem \uN g'8\rest \lineDashed f8\f\- s16 g8\rest s16}
+    \relative c'{\hide Stem \uN g'8\rest \lineDashed f8\f\-\downbow s16 g8\rest s16}
   >>
   r4
   \stopStaff s2*2
@@ -543,7 +546,7 @@ bassFlute = \new Staff = "Dimitri" \with{
   r4 b'8.\upbow_\markup{\line{"[S]"}\draw-line#'(3 . 0)}\-[ r16]
   r4 r8 \tuplet 3/2{\slap fs16-.\p\> fs16-. fs16-.\!}
   r4 <<
-    \relative c'{\hide NoteHead \uN \tuplet 3/2{ \stemDown g'8\rest a4--\downbow\mp_\markup{\line{"[R]"}\draw-line#'(5 . 0)}} 8 d8:32\upbow--_\markup{\line{"[R]"}\draw-line#'(5 . 0)}}
+    \relative c'{\hide NoteHead \uN \tuplet 3/2{ \stemDown g'8\rest a4--\downbow\mp_\markup{\line{"[R]"}\draw-line#'(12 . 0)}} 8 d8:32\upbow--_\markup{\line{"[R]"}\draw-line#'(5 . 0)}}
     \\
     \relative c'{\hide Stem \omit TupletBracket \omit TupletNumber \tuplet 3/2{ s8 \uN a'4\-} s8 \lineDashed d8\-}
   >>
@@ -561,33 +564,33 @@ bassFlute = \new Staff = "Dimitri" \with{
   \startStaff
   \mark "Q" r4 <<
     \relative c'{
-      g'8\rest[ \hide NoteHead \slap d32_._>\f d32\rest \uN d16\upbow_-_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]
-      8.[ b'16\upbow_-_\markup{\line{"[S]"}\draw-line#'(5 . 0)}] 8.[ g16\rest]
+      g'8\rest[ \hide NoteHead \slap d32_._>\f d32\rest \uN d16\upbow_-_\markup{\line{"[F]"}\draw-line#'(11 . 0)}]
+      8.[ b'16\upbow_-_\markup{\line{"[S]"}\draw-line#'(8 . 0)}] 8.[ g16\rest]
     }
     \\
     \relative c'{\hide Stem s8 \slap d32 s32 \uN d16\- s8. b'16\- s8. g16\rest}
   >>
   r4 <<
     \relative c'{
-      \hide NoteHead \uN \tuplet 3/2{g'4\rest fs8\downbow_-_\markup{\line{"[F]"}\draw-line#'(5 . 0)}}
-      f8[ cs8:32_-\upbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)}] cs16:32[ b'8.\downbow_-_\markup{\line{"[sh]"}\draw-line#'(5 . 0)}]
-      \tuplet 3/2{4 d,8\downbow_-_\markup{\line{"[F]"}\draw-line#'(5 . 0)}} \slurDown \tuplet 5/4{\dalniente d16\> e( fs gs as)} g4\rest\!
+      \hide NoteHead \uN \tuplet 3/2{g'4\rest fs8\downbow_-_\markup{\line{"[F]"}\draw-line#'(8 . 0)}}
+      f8[ cs8:32_-\upbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)}] cs16:32[ b'8.\downbow_-_\markup{\line{"[sh]"}\draw-line#'(15 . 0)}]
+      \tuplet 3/2{4 d,8\downbow_-_\markup{\line{"[F]"}\draw-line#'(10 . 0)}} \slurDown \tuplet 5/4{\dalniente d16\> e( fs gs as)} g4\rest\!
     }
     \\
     \relative c'{
       \hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 fs8\-}
-      s8 cs8\- s16 b'8.\-
+      s8 \lineDashed cs8\- s16 b'8.\-
       \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 d,8\-} \omit TupletBracket \omit TupletNumber \tuplet 5/4{s16 e fs gs as} s4
     }
   >>
   %321 from 2nd beat
-  \uN \dalniente b8\-\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)}\<[ r8\f]
+  \uN \dalniente b8--\-\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)}\<[ r8\f]
   \noireNH \naturalUp \dalniente d,!8..\<\glissando \magnifyMusic0.5{cs32} r4\mp
   \uN \dalniente b'8\f--\-\downbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)}\>[ r8\!]
   <<
     \relative c'{
-      \hide NoteHead \uN cs4\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}\p
-      c16[ b'8.\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)}] g4\rest
+      \hide NoteHead \uN cs4_-\downbow_\markup{\line{"[F]"}\draw-line#'(12 . 0)}\p
+      c16[ b'8._-\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)}] g4\rest
       \stopStaff s2
       \startStaff \tuplet 3/2{g8\rest \stemDown b4--\upbow\f_\markup{\line{"[sh]"}\draw-line#'(5 . 0)}} 8[ g8\rest]
     }
@@ -606,13 +609,13 @@ bassFlute = \new Staff = "Dimitri" \with{
   \startStaff
   \slap f16-.->\f[ r8.] r4
   r16 \tuplet 3/2{a16-.(\mp\> 16-. 16-. )} r16\! r4
-  r4 \uN \lineDashed cs,4:32\downbow\-_\markup{\line{"[R]"}\draw-line#'(5 . 0)}
+  r4 \uN \lineDashed cs,4:32_-\downbow\-_\markup{\line{"[R]"}\draw-line#'(11 . 0)}
   \stopStaff \hide Rest r2
   \startStaff \undo \hide Rest
   %250
   r4 <<
     \relative c'{
-      \hide NoteHead \uN \tupletDown \tuplet 3/2{\stemDown g'8\rest[ g8\rest  b8_\markup{\line{"[F]"}\draw-line#'(5 . 0)}\p\downbow]}
+      \hide NoteHead \uN \tupletDown \tuplet 3/2{\stemDown g'8\rest[ g8\rest  b8_\markup{\line{"[F]"}\draw-line#'(5 . 0)}\p--\downbow]}
       8.[ g16\rest]
     }
     \\
@@ -625,19 +628,19 @@ bassFlute = \new Staff = "Dimitri" \with{
   \noireNH \dalniente a'''8..\mp\>\flageolet\glissando \magnifyMusic0.5{gs32\flageolet\!} r4
   \stopStaff s2*2
   \startStaff
-  \dalniente a,,8.\-\<[ r16\pp] \naturalDown \dalniente f!8\<\-[ r8\p]
-  \dalniente a''8..\pp\>\flageolet\glissando \magnifyMusic0.5{gs32\flageolet\!}
+  \dalniente a,,8.\-\<[ r16\pp] \naturalDown \dalniente f'!8\<\-[ r8\p]
+  \dalniente a'8..\pp\>\flageolet\glissando \magnifyMusic0.5{gs32\flageolet\!}
   <<
-    \relative c'{\hide NoteHead \uN \stemDown r8.[ b'16\upbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}] 16[ g8.\rest]}
+    \relative c'{\hide NoteHead \uN \stemDown r8.[ b'16--\upbow_\markup{\line{"[F]"}\draw-line#'(8 . 0)}] 16[ g8.\rest]}
     \\
     \relative c'{\hide Stem \uN s8. b'16\- s16 g8\rest s16}
   >>
-  \uN \lineDashed c,,,8:32\upbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)}[ r8]
+  \uN \lineDashed c,,,8:32--\-\upbow_\markup{\line{"[R]"}\draw-line#'(3 . 0)}[ r8]
   %359
   <<
     \relative c'{
       \hide NoteHead \uN \tuplet 5/4{g'16\rest[ g16\rest g16\rest fs8\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]} \tuplet 5/4{16[ g16\rest g16\rest d8]\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}}
-      \tuplet 5/4{16[ g16\rest g16\rest g16\rest d16_-\upbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]} \tuplet 3/2{8[ g\rest b8\downbow--_\markup{\line{"[S]"}\draw-line#'(5 . 0)}]}
+      \tuplet 5/4{16[ g16\rest g16\rest g16\rest d16_-\upbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]} \tuplet 3/2{8[ g\rest b8\downbow_-_\markup{\line{"[S]"}\draw-line#'(5 . 0)}]}
     }
     \\
     \relative c'{
@@ -649,14 +652,14 @@ bassFlute = \new Staff = "Dimitri" \with{
   r4 <<
     \relative c'{
       \hide NoteHead \uN \tuplet 3/2{g'8\rest[ g8\rest cs8_-\upbow_\markup{\line{"[sh]"}\draw-line#'(5 . 0)}]}
-      c16[ d,8:32\downbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)} g16\rest] \tuplet 5/4{g16\rest[ g16\rest g16\rest fs8]_\markup{\line{"[F]"}\draw-line#'(5 . 0)}}
-      \tuplet 5/4{f8[ g16\rest g16\rest f16\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]} \tuplet 5/4{8[ g16\rest g16\rest d16_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]}
+      c16[ d,8:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)} g16\rest] \tuplet 5/4{g16\rest[ g16\rest g16\rest fs8]_\markup{\line{"[F]"}\draw-line#'(10 . 0)}}\downbow
+      \tuplet 5/4{f8[ g16\rest g16\rest f16_-\downbow_\markup{\line{"[F]"}\draw-line#'(10 . 0)}]} \tuplet 5/4{8[ g16\rest g16\rest d16_-_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]}\downbow
       16[ g8.\rest]
     }
     \\
     \relative c'{
       \hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 cs'8\-}
-      s16 d,8\- g16\rest
+      s16 \lineDashed d,8\- g16\rest
       \omit TupletBracket \omit TupletNumber \tuplet 5/4{g16\rest g\rest g\rest fs8\-}
       \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8 g16\rest g\rest fs16\-}
       \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8 g16\rest g\rest  d16\-}
@@ -668,13 +671,13 @@ bassFlute = \new Staff = "Dimitri" \with{
   <<
     \relative c'{
       \hide NoteHead \uN
-      g'8\rest[ d8:32] \tuplet 3/2{d8:32\f\downbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)}[ g8\rest g\rest]}
-      g16\rest[ e8:32\upbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)} g16\rest] \noireNH \tuplet 3/2{g8\rest[ g\rest a8:32\mp]}
+      g'8\rest[ d8:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(13 . 0)}] \tuplet 3/2{d8:32\f[ g8\rest g\rest]}
+      g16\rest[ e8:32_-\upbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)} g16\rest] \noireNH \tuplet 3/2{g8\rest[ g\rest a8:32--\mp]}
       a16:32[ g'8.\rest]
     }
     \\
     \relative c'{
-      \hide Stem g'8\rest \lineDashed d8\-\mp \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 g8\rest g\rest}
+      \hide Stem g'8\rest \lineDashed \uN d8\-\mp \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 g8\rest g\rest}
       g16\rest \lineDashed e8\- g16\rest \noireNH \omit TupletBracket \omit TupletNumber \tuplet 3/2{ g8\rest g\rest \lineDashed a8\-}
       s16 g'8\rest s16
     }
@@ -689,8 +692,8 @@ bassFlute = \new Staff = "Dimitri" \with{
   \startStaff
   <<
     \relative c'{
-      \hide NoteHead \uN \tuplet 3/2{r8 \stemDown cs'4--\upbow\mf_\markup{\line{"[sh]"}\draw-line#'(5 . 0)}} \stemNeutral 16[ cs,8.\downbow\p_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]
-      g'4\rest g16.\rest[ cs,32:64--_\markup{\line{"[R]"}\draw-line#'(5 . 0)}\f cs8:32]
+      \hide NoteHead \uN \tuplet 3/2{r8 \stemDown cs'4--\upbow\mf_\markup{\line{"[sh]"}\draw-line#'(5 . 0)}} \stemNeutral 16[ cs,8._-\downbow\p_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]
+      g'4\rest g16.\rest[ cs,32:64_-_\markup{\line{"[R]"}\draw-line#'(5 . 0)}\f\downbow cs8:32]
     }
     \\
     \relative c'{
@@ -699,14 +702,14 @@ bassFlute = \new Staff = "Dimitri" \with{
     }
   >>
   %374
-  r4 r8[ \lineDashed a8:32\-\downbow\f_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]
+  r4 r8[ \lineDashed a8:32_-\-\downbow\f_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]
   %375
-  \noireNH \dalniente a''8..\pp\>\glissando\flageolet \magnifyMusic0.5{gs32\flageolet\!} r4
+  \noireNH \dalniente a''8..--\mp\>\glissando\flageolet \magnifyMusic0.5{gs32\flageolet\!} r4
   %376
   \stopStaff s2*2
   \startStaff
   <<
-    \relative c'{\hide NoteHead \uN \tupletDown \stemDown \tuplet 3/2{g'8\rest[ g\rest b--\mf\upbow_\markup{\line{"[sh]"}\draw-line#'(5 . 0)}]} 16 \undo \hide NoteHead \stemNeutral \tuplet 3/2{\slap d,16_.\f[ d16_. d16_.]} g16\rest}
+    \relative c'{\hide NoteHead \uN \tupletDown \stemDown \tuplet 3/2{g'8\rest[ g\rest b--\mf\upbow_\markup{\line{"[sh]"}\draw-line#'(3 . 0)}]} 16 \undo \hide NoteHead \stemNeutral \tupletUp \tuplet 3/2{\slap d,16_.\f[ d16_. d16_.]} g16\rest}
     \\
     \relative c'{\hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 b'8\-} s16 \hide Rest r8. \undo \hide Rest}
   >>
@@ -717,13 +720,13 @@ bassFlute = \new Staff = "Dimitri" \with{
   %383
   <<
     \relative c'{
-      \hide NoteHead \uN g'8.\rest[ a16\upbow\mp--_\markup{\line{"[g]"}\draw-line#'(5 . 0)}] \tuplet3/2{ 4 fs8\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)} }
+      \hide NoteHead \uN g'8.\rest[ a16\upbow\mp_-_\markup{\line{"[g]"}\draw-line#'(5 . 0)}] \tuplet3/2{ 4 fs8_-\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)} }
       f8.[ g16\rest]
     }
     \\
     \relative c'{\hide Stem s8. \uN a'16\- \omit TupletNumber \omit TupletBracket \tuplet 3/2{s4 fs8\-} s8. g16\rest}
   >>
-  \dalniente \noireNH a''8..\pp\>\glissando\flageolet \magnifyMusic0.5{gs32\flageolet\!}
+  \dalniente \noireNH a''8..--\mp\>\glissando\flageolet \magnifyMusic0.5{gs32\flageolet\!}
   r4 r16[ <b,! cs>8.\-\p]
   r4 r16[ \lineDashed <c,! cs>8.:32\mp\-]
   r8[ \uN \lineDashed fs,8:32--\upbow\-_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]
@@ -801,23 +804,23 @@ bassFlute = \new Staff = "Dimitri" \with{
   %408
   \startStaff \mark "R1"
   <<
-    \relative c'{\hide NoteHead cs4:32\downbow_\markup{\line{"[R]"}\draw-line#'(10 . 0)} b4:32}
+    \relative c'{\hide NoteHead cs4:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(20 . 0)} b4:32}
     \\
     \relative c'{\hide Stem \uN \lineDashed cs4\-\fffff s4}
   >> \stopStaff s2 %409
   \startStaff r4
-    <<\relative c'{\hide NoteHead b'4:32\downbow_\markup{\line{"[R]"}\draw-line#'(10 . 0)} b4:32}
+    <<\relative c'{\hide NoteHead b'4:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(10 . 0)} b4:32}
     \\
     \relative c'{\hide Stem \uN \lineDashed b'4\-\fffff s4}>>  r4
     \stopStaff
 
   \stopStaff s2*22 \mark "S"
   %434
-  \startStaff r16[ \uN \lineDashed c8.:32\-\upbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]
+  \startStaff r16[ \uN \lineDashed c8.:32_-\-\upbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]
   <<
     \relative c'{
-      \hide NoteHead  b'8\-\upbow--_\markup{\line{"[S]"}\draw-line#'(3 . 0)}[ s16 cs,16\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]
-      c16[ a'8.\upbow--_\markup{\line{"[F]"}\draw-line#'(5 . 0)}] g4\rest
+      \hide NoteHead \uN b'8\-\upbow_-_\markup{\line{"[S]"}\draw-line#'(3 . 0)}[ s16 cs,16_-\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]
+      c16[ a'8.\upbow_-_\markup{\line{"[F]"}\draw-line#'(8 . 0)}] g4\rest
     }
     \\
     \relative c'{
@@ -838,11 +841,11 @@ bassFlute = \new Staff = "Dimitri" \with{
   >>
   %441
   \startStaff
-  r16[ \uN b'8.--\upbow\f\-_\markup{\line{"[S]"}\draw-line#'(3 . 0)}] r4 \stopStaff
+  r16[ \uN b'8.--\upbow\f\-_\markup{\line{"[S]"}\draw-line#'(6 . 0)}] r4 \stopStaff
   %442
   s2*4 \mark "T"
   \startStaff
-  \blancheNH a''2\-\ppp\flageolet \stopStaff \hide Rest r2
+  \blancheNH a''2^-\-\ppp\flageolet \stopStaff \hide Rest r2
   %448
   \startStaff
   <<
@@ -853,16 +856,16 @@ bassFlute = \new Staff = "Dimitri" \with{
       <b c>4 8[ b,8\rest]
       \stopStaff s2*4
       %456
-      \stemNeutral fs4\downbow_\markup{\line{"[F]"}\draw-line#'(10 . 0)} 16 a8.\upbow--_\markup{\line{"[g]"}\draw-line#'(3 . 0)}
+      \stemNeutral fs4\downbow_\markup{\line{"[F]"}\draw-line#'(10 . 0)} 16 a8.\upbow_-_\markup{\line{"[g]"}\draw-line#'(8 . 0)}
       \stopStaff s2*2
-      \startStaff b4\rest b16\rest[ a8.\downbow\p_\markup{\line{"[S]"}\draw-line#'(3 . 0)}]
+      \startStaff b4\rest b16\rest[ \uN a8._-\downbow\p_\markup{\line{"[S]"}\draw-line#'(13 . 0)}]
       16.[ b32\rest b8\rest] b4\rest
     }
     \\
     \relative c'{
-      \hide Stem \noireNH \naturalUp s4 b''!4\-
+      \hide Stem \noireNH \naturalUp s4 b''!4^-\-
       s4 s16 b,\rest s8
-      s4. <b' cs>8\-
+      s4. <b' cs>8^-\-
       s4 s8 b,8\rest
       \stopStaff s2*4 \mark "U"
       %456
@@ -886,7 +889,7 @@ bassFlute = \new Staff = "Dimitri" \with{
   %492 [15]
   \startStaff
   <<
-    \relative c'{\hide NoteHead \uN   c8_-_\markup{\line{"[F]"}\draw-line#'(3 . 0)}\downbow f\upbow_\markup{\line{"[g]"}\draw-line#'(3 . 0)} 16[ bf8.\upbow_\markup{\line{"[S]"}\draw-line#'(3 . 0)}_-]}
+    \relative c'{\hide NoteHead \uN   c8_-_\markup{\line{"[F]"}\draw-line#'(3 . 0)}\downbow f_-\upbow_\markup{\line{"[g]"}\draw-line#'(5 . 0)} 16[ bf8.\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)}_-]}
     \\
     \relative c'{\hide Stem \uN c8\- f\- s16 bf8.\- }
   >>
@@ -898,8 +901,8 @@ bassFlute = \new Staff = "Dimitri" \with{
   \mark "X" r4 r16 \tuplet 3/2{ \slap d,,,16-.->\f\> d16-. d16-.} r16\!
   r4 r16 \tuplet 3/2{ \slap d16-.->\f\> d16-. d16-.} r16\!
   %498
-  \noireNH a'''4\-\p\flageolet r4
-  \uN \lineDashed c,,,8:32\-\downbow_\markup{\line{"[R]"}\draw-line#'(3 . 0)}\mf[ r8] r4
+  \noireNH a'''4--\-\mp\flageolet r4
+  \uN \lineDashed c,,,8:32_-\-\downbow_\markup{\line{"[R]"}\draw-line#'(3 . 0)}\mf[ r8] r4
   %500
   \stopStaff s2*3
   \startStaff
@@ -910,7 +913,7 @@ bassFlute = \new Staff = "Dimitri" \with{
     }
     \\
     \relative c'{
-      \hide Stem \noireNH s16 <b'' cs>8\- s16
+      \hide Stem \noireNH s16 <b'' cs>8^-\- s16
       s4 b,4\rest
     }
   >>
@@ -919,7 +922,7 @@ bassFlute = \new Staff = "Dimitri" \with{
   \startStaff
   <<
     \relative c'{
-      b'4\rest \stemDown \hide NoteHead \noireNH c'4\pp
+      b'4\rest \stemDown \hide NoteHead \noireNH c'4--\mf
       4 4
       4 b,4\rest
     }
@@ -928,20 +931,22 @@ bassFlute = \new Staff = "Dimitri" \with{
   >>
   %510
   \stopStaff
-  s2*19
+  s2*4 \startStaff 
+  \sharpDown \dalniente \noireNH fs''4--\mp\> \glissando \magnifyMusic 0.5 {e32\!} r32 r8. \stopStaff 
+  s2*14
   %529
   \startStaff
-  \mark "Y" r4 \dalniente \noireNH \dalniente a'8..\pp\glissando\> \magnifyMusic0.5{g32\!}
+  \mark "Y" r4 \dalniente \noireNH \dalniente a,,8..--\pp\glissando\> \magnifyMusic0.5{g32\!}
   <<
     \relative c'{
-      \hide NoteHead \uN \tuplet 3/2{a'4:32--\upbow_\markup{\line{"[R]"}\draw-line#'(3 . 0)} cs,8--\downbow_\markup{\line{"[F]"}\draw-line#'(3 . 0)}} 8[ fs\upbow--_\markup{\line{"[S]"}\draw-line#'(3 . 0)}]
-      f16[ b\rest \noireNH \undo \hide NoteHead a''8\flageolet\glissando] fs16\flageolet[ \hide NoteHead b,16\rest b8\rest]
-      \tuplet 3/2{b,4\rest a8--\downbow_\markup{\line{"[F]"}\draw-line#'(3 . 0)}} 16[ cs,8.:32_\markup{\line{"[R]"}\draw-line#'(3 . 0)}]\downbow
+      \hide NoteHead \uN \tuplet 3/2{a'4:32_-\upbow_\markup{\line{"[R]"}\draw-line#'(3 . 0)} cs,8_-\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}} 8[ fs\upbow_-_\markup{\line{"[S]"}\draw-line#'(3 . 0)}]
+      f16 b\rest \noireNH \undo \hide NoteHead \stemDown a''8\flageolet\glissando \magnifyMusic 0.5 {fs16\flageolet} \hide NoteHead b,16\rest b8\rest
+      \tuplet 3/2{b,4\rest \uN \stemNeutral a8_-\downbow_\markup{\line{"[F]"}\draw-line#'(8 . 0)}} 16[ cs,8.:32_-_\markup{\line{"[R]"}\draw-line#'(25 . 0)}]\downbow
       \tuplet 6/4{\dalniente c16:64\> ds16:64 f16:64 g16:64 a16:64 b16:64} b4\rest\!
     }
     \\
     \relative c'{
-      \hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 3/2{\lineDashed a'4 cs,8\-} s8 fs8\-
+      \hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 3/2{\lineDashed a'4\- cs,8\-} s8 fs8\-
       s16 b16\rest s8 s4
       \omit TupletBracket \omit TupletNumber \tuplet 3/2{b4\rest a8\-}
       s16 \lineDashed cs,8.\-
@@ -951,20 +956,20 @@ bassFlute = \new Staff = "Dimitri" \with{
   \stopStaff s2 %534
   \startStaff
   \slap \tuplet 5/4{cs,16-.\mp\> ds-. f-. g-. a-.} r4\!
-  \noireNH \dalniente f''8..\p\glissando\flageolet\> \magnifyMusic0.5{e32\flageolet\!} r4
+  \noireNH \dalniente f''8..--\mp\glissando\flageolet\> \magnifyMusic0.5{e32\flageolet\!} r4
   \stopStaff s2*3
 
   %540 [30]
   \startStaff  \mark "Z"
   <<
     \relative c'{
-      \hide NoteHead \uN b'4._-\upbow_\markup{\line{"[g]"}\draw-line#'(7 . 0)} c,8--\downbow_\markup{\line{"[F]"}\draw-line#'(7 . 0)}
-      \tuplet 3/2{2 fs4\upbow_\markup{\line{"[F]"}\draw-line#'(7 . 0)}}
-      f16[ b8.\downbow_\markup{\line{"[S]"}\draw-line#'(7 . 0)}] 4
-      4 cs,4\upbow_\markup{\line{"[g]"}\draw-line#'(7 . 0)}
-      c8 ds4:32\downbow_\markup{\line{"[R]"}\draw-line#'(7 . 0)} a'8\upbow_\markup{\line{"[F]"}\draw-line#'(7 . 0)}
-      4 16[ fs8.\upbow_\markup{\line{"[g]"}\draw-line#'(7 . 0)}]
-      f4 8[ cs\downbow_\markup{\line{"[F]"}\draw-line#'(7 . 0)}]
+      \hide NoteHead \uN b'4._-\upbow_\markup{\line{"[g]"}\draw-line#'(10 . 0)} c,8_-\downbow_\markup{\line{"[F]"}\draw-line#'(7 . 0)}
+      \tuplet 3/2{2 fs4_-\upbow_\markup{\line{"[F]"}\draw-line#'(10 . 0)}}
+      f16[ b8._-\downbow_\markup{\line{"[S]"}\draw-line#'(30 . 0)}] 4
+      4 cs,4_-\upbow_\markup{\line{"[g]"}\draw-line#'(17 . 0)}
+      c8 ds4:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(7 . 0)} a'8_-\upbow_\markup{\line{"[F]"}\draw-line#'(10 . 0)}
+      4 16[ fs8._-\upbow_\markup{\line{"[g]"}\draw-line#'(7 . 0)}]
+      f4 8[ cs_-\downbow_\markup{\line{"[F]"}\draw-line#'(23 . 0)}]
       c4 8[ g'8\rest]
     }
     \\

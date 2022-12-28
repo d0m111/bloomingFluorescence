@@ -269,7 +269,7 @@ contraBassCl = \new Staff = "Heni" \with{
     %171
     r4 \uN \lineDashed b'8:32\-_\markup{\line{"[R]"}\draw-line#'(3 . 0)}[ r8]
     %172
-    r4 \noireNH \dalniente cs,4\<
+    r4 \noireNH \dalniente cs,4\<\-
     %173
     r16\f[ \uN ef'8.\upbow--_\markup{\line{"[S]"}\draw-line#'(3 . 0)}\-] r4
     %174-181
@@ -375,9 +375,9 @@ contraBassCl = \new Staff = "Heni" \with{
     \startStaff
     r8 r32 \slap cs,,16^\markup{\teeny{"+"}}( \xH g''32\flageolet) r8[ fs,16->-.(^\markup{\teeny{"+"}} g'16\flageolet)]
     %256-257
-    r4 <<\relative c{\hide NoteHead \uN g''8\rest[ gs,8:32_-_\markup{\line{"[R]"}\draw-line#'(5 . 0)}] g16:32[ g'8.\rest]}
+    r4 <<\relative c{\hide NoteHead \uN g''8\rest[ gs,8:32_-_\markup{\line{"[R]"}\draw-line#'(8 . 0)}] g16:32[ g'8.\rest]}
     \\
-    \relative c{\hide Stem \uN g''8\rest \lineDashed gs,8\- s16 g'8\rest s16}>>
+    \relative c{\hide Stem \uN g''8\rest \lineDashed gs,8\-\downbow s16 g'8\rest s16}>>
     r4
     %258-259
     r4 r16[\slap e,16-.->\mf( \xH g'16-.\flageolet) b16-.->^\markup{\teeny{"+"}}](
@@ -391,7 +391,7 @@ contraBassCl = \new Staff = "Heni" \with{
     \\
     \relative c{\repeat unfold 2{\hide Stem \uN d'8\rest \lineDashed cs,8\-}}>>
     %263
-    <<\relative c{d'8.\rest[ cs,16:32] cs16:32_-_\markup{\line{"[R]"}\draw-line#'(8 . 0)}[ d'8.\rest]}
+    <<\relative c{d'8.\rest[ cs,16:32]_-_\markup{\line{"[R]"}\draw-line#'(8 . 0)}\downbow cs16:32[ d'8.\rest]}
     \\
     \relative c{d'8\rest s16 \lineDashed cs,16\- s16 d'8\rest s16}>>
 
@@ -448,11 +448,11 @@ contraBassCl = \new Staff = "Heni" \with{
     <<\relative c'{\hide NoteHead \uN \tuplet 5/4{ g'16\rest[ g\rest g\rest g,8:32\downbow\mp_\markup{\line{"[R]"}\draw-line#'(4 . 0)}_-]} 16[ g'8.\rest] }
     \\
     \relative c'{\hide Stem \omit TupletBracket \omit TupletNumber \uN \tuplet 5/4{ g'16\rest s8 \lineDashed g,8\-} s16 g'8\rest s16}>>
-    g'8.\rest[ \xH c,,32\f-.->(^\markup{\teeny{"+"}} g''32\flageolet)] \slap c,,16-.\p[ r16 f-. r16]
+    g'8.\rest \xH c,,32\f-.->(^\markup{\teeny{"+"}}[ g''32\flageolet)] \slap c,,16-.\p[^\markup{\teeny{"slap"}} r16 f-. r16]
     r4 \tuplet 5/4{r16[ a-.\p r16 fs-. r16]}
     \stopStaff s2
     \startStaff 
-    <<\relative c'{\hide NoteHead \uN \tuplet 3/2{ g'8\rest[ g\rest g,8:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(4 . 0)}]} 16:64[ g'8.\rest]}
+    <<\relative c'{\hide NoteHead \uN \tuplet 3/2{ g'8\rest[ g\rest g,8:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(6 . 0)}]} 16:64[ g'8.\rest]}
     \\
     \relative c'{\hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 3/2{g'8\rest s8 \lineDashed g,8\-} s16 g'8\rest s16}>>
     \stopStaff s2*9
@@ -468,10 +468,10 @@ contraBassCl = \new Staff = "Heni" \with{
     %316
     \startStaff
     r4 r8[ \slap c'16->-.\f gs'-.]
-    r4 r32[ ds16-.-> g,32 r8 ]
+    r4 r32[ ds16-.-> g,32-. r8 ]
     \uN \lineDashed ds8:32_-\upbow\p\-_\markup{\line{"[R]"}\draw-line#'(4 . 0)}[ r8] r4
     r32[ \slap e'16-.->\f b32-.] r8 
-    <<\relative c'{\hide NoteHead \uN \tuplet 5/4{r8[ cs8._-\downbow_\markup{\line{"[F]"}\draw-line#'(4 . 0)}]}
+    <<\relative c'{\hide NoteHead \uN \tuplet 5/4{r8[ cs8._-\downbow_\markup{\line{"[F]"}\draw-line#'(6 . 0)}]}
     c16 \slurDown \dalniente b'\upbow(\>_\markup{\line{"[S]"}\draw-line#'(4 . 0)} a fs) g4\rest\!}
     \\
     \relative c'{\hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8 cs8.\-} s16 b' a fs g4\rest}>>
@@ -481,9 +481,9 @@ contraBassCl = \new Staff = "Heni" \with{
     \\
     \relative c' {\noireNH e,8.\-\ppp[ g'16\rest] }>> %}
     
-    r8..[\xH cs,,32-.->^\markup{\teeny{"+"}}] 
-    \slap cs32-.\pp[ \xH g''32-.\flageolet r16 r8] r4
-    <<\relative c'{\hide NoteHead \uN \tuplet 5/4{r8[ gs8.\downbow_-_\markup{\line{"[F]"}\draw-line#'(4 . 0)}]} gs16 a'8.\downbow--_\markup{\line{"[g]"}\draw-line#'(4 . 0)}_-
+    r8..[\xH cs,,32\ff-.->^\markup{\teeny{"+"}}] 
+    \slap cs32-.^\markup{\teeny{"slap"}}[ \xH g''32-.\flageolet r16 r8] r4
+    <<\relative c'{\hide NoteHead \uN \tuplet 5/4{r8[ gs8.\downbow_-_\markup{\line{"[F]"}\draw-line#'(6 . 0)}]} gs16 a'8.\downbow_-_\markup{\line{"[g]"}\draw-line#'(4 . 0)}_-
     \stopStaff s2
     \startStaff r8.[ \noireNH \dalniente b,16\<] b8[ g'8\rest\pp]}
     \\
@@ -532,15 +532,15 @@ contraBassCl = \new Staff = "Heni" \with{
     \dalniente cs,8.[\-\< r16\p] \dalniente c!8[\<\- r8\p]
     r4 \tuplet 3/2{r8 \uN \lineDashed ds'4:32--\-\p_\markup{\line{"[R]"}\draw-line#'(4 . 0)}}
     %358
-    <<\relative c'{\hide NoteHead \uN \tuplet 3/2{g'8\rest[ g\rest a8_-_\markup{\line{"[F]"}\draw-line#'(4 . 0)}]} 16[ g16\rest g32\rest \undo \hide NoteHead \slap g,16_._>] s32
+    <<\relative c'{\hide NoteHead \uN \tuplet 3/2{g'8\rest[ g\rest a8_-_\markup{\line{"[F]"}\draw-line#'(10 . 0)}]} 16[ g16\rest g32\rest \undo \hide NoteHead \slap g,16_._>] s32
     %359
     \hide NoteHead
     \tuplet 5/4{g'16\rest[ g16\rest g16\rest gs,8\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]} \tuplet 5/4{16[ g16\rest g16\rest e8]\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}}
     \tuplet 5/4{16[ g16\rest g16\rest g16\rest e16_-\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)}]} 16[ g16\rest \slap cs,16_._>\mf g'16\rest]
     %361
-    g'4\rest g16\rest[ fs8._-\downbow_\markup{\line{"[g]"}\draw-line#'(5 . 0)}]
-    \tuplet 3/2{f8 b4\upbow_-_\markup{\line{"[sh]"}\draw-line#'(5 . 0)}} \tuplet 5/4{16[ g16\rest g16\rest gs,8]_\markup{\line{"[F]"}\draw-line#'(5 . 0)}}
-    \tuplet 5/4{g8[ g16\rest g16\rest gs16\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]} \tuplet 5/4{8[ g16\rest g16\rest e16_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]}
+    g'4\rest g16\rest[ fs8._-\downbow_\markup{\line{"[g]"}\draw-line#'(15 . 0)}]
+    \tuplet 3/2{f8 b4\upbow_-_\markup{\line{"[sh]"}\draw-line#'(10 . 0)}} \tuplet 5/4{16[ g16\rest g16\rest gs,8]_\markup{\line{"[F]"}\draw-line#'(13 . 0)}}
+    \tuplet 5/4{g8[ g16\rest g16\rest gs16\downbow_\markup{\line{"[F]"}\draw-line#'(15 . 0)}]} \tuplet 5/4{8[ g16\rest g16\rest e16_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]}\downbow
     16[ g8.\rest] g'4\rest
     %365
     \noireNH
@@ -553,9 +553,9 @@ contraBassCl = \new Staff = "Heni" \with{
     %359
     \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8. \uN gs,8\-} \omit TupletBracket \omit TupletNumber \tuplet 5/4{s16 g16\rest g16\rest e8\-}
     \omit TupletBracket \omit TupletNumber \tuplet 5/4{s16 g16\rest g16\rest g16\rest e\-}
-    s16 g16\rest \slap cs,16 s16
+    s16 g16\rest \slap cs,16^\markup{\teeny{"slap"}} s16
     s4 s16 \uN fs'8.\-
-    \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 b4\-} \omit TupletBracket \omit TupletNumber \tuplet 5/4{s16 g16\rest g16\rest gs,8\-}
+    \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 b4\-} \omit TupletBracket \omit TupletNumber \tuplet 5/4{s16 g16\rest g16\rest gs,8_-\-\downbow}
     \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8 g16\rest g16\rest gs16\-} \omit TupletBracket \omit TupletNumber \tuplet 5/4{s8 g16\rest g16\rest e16\-}
     s16 g8\rest s16 s4
     %365
@@ -567,18 +567,18 @@ contraBassCl = \new Staff = "Heni" \with{
     \stopStaff s2
     %369
     \startStaff
-    \tuplet 3/2{r8[ \slap c,8-.->\f r8]} \uN a''8--\-\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)}[ r8]
+    \tuplet 3/2{r8[ \slap c,8-.->\f^\markup{\teeny{"slap"}} r8]} \uN a''8--\-\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)}[ r8]
     \stopStaff
     %370
     \startStaff
-    \slap g,16-.->\f[ \uN \lineDashed cs,8.:32--\mp\-_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]
-    r8 \dalniente \noireNH b''16..\pp\>\glissando \magnifyMusic0.5{ bf64\!}
-    r16[ \slap e,,16-.->\f \xH cs16.->-.^\markup{\teeny{"+"}}( g''32\flageolet)] r4
-    \lineDashed \noireNH \tuplet 3/2{r8  d,4:32\p--\-} r8[ r16. \slap cs32-.->\f] 
+    \slap g,16-.->\f^\markup{\teeny{"slap"}}[ \uN \lineDashed cs,8.:32--\downbow\mp\-_\markup{\line{"[R]"}\draw-line#'(10 . 0)}]
+    r8 \dalniente \noireNH b''16..--\mp\>\glissando \magnifyMusic0.5{ \sharpDown as64\!}
+    r16[ \slap e,16-.->\f^\markup{\teeny{"slap"}} \xH cs16.->-.^\markup{\teeny{"+"}}( g''32\flageolet)] r4
+    \lineDashed \noireNH \tuplet 3/2{r8 \lineDashed d,4:32\p--\-} r8[ r16. \slap cs32-.->\f^\markup{\teeny{"slap"}}] 
     r4 <<\relative c'{\hide NoteHead \noireNH g'16.\rest[ \dalniente g,32\< 8] g'4\rest\f}
     \\
     \relative c'{\hide Stem s16. \noireNH g32\- s8 \hide Rest r4 \undo \hide Rest}>>
-     r8[ \uN \lineDashed fs8:32\-\downbow\f_\markup{\line{"[R]"}\draw-line#'(5 . 0)}\f]
+     r8[ \uN \lineDashed fs8:32--\-\downbow\f_\markup{\line{"[R]"}\draw-line#'(5 . 0)}\f]
     %375
     %{<<\relative c' {\diamondH \override NoteHead.no-ledgers = ##t \stemDown \omit Flag \override Stem.length = #25 <e'' f>8.\-}
     \\
@@ -587,11 +587,11 @@ contraBassCl = \new Staff = "Heni" \with{
     r4
     \stopStaff s2
     %377
-    \startStaff r4 <<\relative c'{\hide NoteHead \uN g'16\rest[ gs8._-\mf\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]
-    g4 16[ \undo \hide NoteHead \slap gs,16->-.\f g'8\rest]}
+    \startStaff r4 <<\relative c'{\hide NoteHead \uN g'16\rest[ gs8._-\mf\downbow_\markup{\line{"[F]"}\draw-line#'(25 . 0)}]
+    g4 16[ \undo \hide NoteHead \slap gs,16_>_.\f^\markup{\teeny{"slap"}} g'8\rest]}
     \\
     \relative c'{\hide Stem \uN s16 gs'8.\-
-    s4 s16 \hide Rest r8.}>>
+    s4 s16 \hide Rest r8 s16}>>
     r4 r16[ \slap cs,16-.->\f r8]
     <<\relative c'{\hide NoteHead 
                           b8\rest[ \dalniente ds,8\<] ds16[ \dalniente ds8.\mf\>]
@@ -606,7 +606,7 @@ contraBassCl = \new Staff = "Heni" \with{
     \relative c' {g'16\rest[ \noireNH cs,,8.\pp] }
     \\
     \relative c'{s16 \noireNH \hide Stem \hide Flag s32 \override NoteHead.no-ledgers = ##t \magnifyMusic0.45{cs,32_\markup{\teeny{"bisb."}} 32 32 32 32} }>> %}
-    \slap cs32-.->\f[ \uN 8..\p\-\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]
+    \slap cs32-.->\f[ \uN 8.._-\p\-\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}]
     %382
     r8 \slap \tuplet 3/2{cs16-.->\f\>( ds16-. e-.)} r4\!
     \stopStaff s2
@@ -632,7 +632,7 @@ contraBassCl = \new Staff = "Heni" \with{
     \relative c'{s16 \noireNH \hide Stem \hide Flag s32 \override NoteHead.no-ledgers = ##t \magnifyMusic0.45{cs,32_\markup{\teeny{"bisb."}} 32 32 32 32} }>> %}
     r16[ \dalniente c!8.\<\-]
     %387
-    r8\f[ \uN \lineDashed g''8:32\-\downbow\f_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]
+    r8\f[ \uN \lineDashed g''8:32_-\-\downbow\f_\markup{\line{"[R]"}\draw-line#'(3 . 0)}]
     <<\relative c'{g'8\rest[ \hide NoteHead \noireNH  gs,8:32\mp_-] 
     g8:32[ g'8\rest]}
     \\
@@ -683,11 +683,11 @@ contraBassCl = \new Staff = "Heni" \with{
     }>> %}
     %408 
     \startStaff
-    <<\relative c'{\hide NoteHead cs,4:32\downbow_\markup{\line{"[R]"}\draw-line#'(10 . 0)} cs4:32}
+    <<\relative c'{\hide NoteHead cs,4:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(20 . 0)} cs4:32}
     \\
     \relative c'{\hide Stem \uN \lineDashed cs,4\-\fffff s4}>> \stopStaff s2
     \startStaff r4
-    <<\relative c'{\hide NoteHead cs,4:32\downbow_\markup{\line{"[R]"}\draw-line#'(10 . 0)} c4:32}
+    <<\relative c'{\hide NoteHead cs,4:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(10 . 0)} c4:32}
     \\
     \relative c'{\hide Stem \uN \lineDashed cs,4\-\fffff s4}>> r4
     \stopStaff
@@ -695,19 +695,19 @@ contraBassCl = \new Staff = "Heni" \with{
     \startStaff 
     %434
     <<\relative c' {s4
-    \tuplet 3/2{\hide NoteHead b8\rest \uN \stemNeutral c,4:32_-_\markup{\line{"[R]"}\draw-line#'(5 . 0)}\downbow}
-    8 cs'8\upbow}
+    \tuplet 3/2{\hide NoteHead b8\rest \uN \stemNeutral c,4:32_-_\markup{\line{"[R]"}\draw-line#'(13 . 0)}\downbow}
+    8 cs'8_-\upbow_\markup{\line{"[F]"}\draw-line#'(4 . 0)}}
     \\
     \relative c' { b'16\rest \noireNH \dalniente \stemNeutral gs,8.\<\-
     \omit TupletBracket \omit TupletNumber \tuplet 3/2{ \hide Stem \uN \hide Rest r8\f \undo \hide Rest \lineDashed c,4\-}
     s8 cs'8\-}>> r4
-    \slap cs,,16-.->\f[ r8.] r4
+    \slap cs,,16-.->\f[^\markup{\teeny{"slap"}} r8.] r4
     %437
     \stopStaff s2*2
     %439
     \startStaff <<\relative c'{b'4\rest \hide NoteHead \noireNH \dalniente \hide Stem <cs, a'>4\<
     \dalniente \undo \hide Stem \stemDown <c a''>4\p\> b'4\rest\!
-    \tuplet 3/2{b8\rest \uN \stemNeutral g,4:32\downbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)}\f} 16[ b16\rest b8\rest]}
+    \tuplet 3/2{b8\rest \uN \stemNeutral g,4:32_-\downbow_\markup{\line{"[R]"}\draw-line#'(8 . 0)}\f} 16[ b16\rest b8\rest]}
     \\
     \relative c'{s4 \uN   \noireNH <cs a''>4\- 
     s4 b'4\rest \hide Stem
@@ -737,33 +737,33 @@ contraBassCl = \new Staff = "Heni" \with{
     s2*4
     \startStaff
     %456
-    r4 \xH cs16.-.->\f^\markup{\teeny{"+"}}[( g''32\flageolet) \slap cs,,16-.->\mp r16] 
+    r4 \xH cs16.-.->\f^\markup{\teeny{"+"}}[( g''32\flageolet) \slap cs,,16-.->\mp^\markup{\teeny{"slap"}} r16] 
     r4 \uN \lineDashed b'8:32_-\downbow\-_\markup{\line{"[R]"}\draw-line#'(5 . 0)}[ r8]
     \stopStaff s2
-    \startStaff r4 r16[ \lineDashed a'8.:32\-\p_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]
-    r16.[ \slap gs,32-.->\f] \tuplet 6/4{\xH a'16-.( g-. f-. e-. d-. c-.)} b'8\rest
+    \startStaff r4 r16[ \lineDashed a'8.:32_-\-\p_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]\downbow
+    r16.[ \slap gs,32-.->\f]^\markup{\teeny{"slap"}} \tuplet 6/4{\xH a'16-.(\ffff g-. f-. e-. d-. c-.)} b'8\rest
 
     \stopStaff %s2*31
     s2
     %462
     \startStaff
-    \slap cs,,16-.\mf[ r8.] r4
+    \slap cs,,16-.\mf[^\markup{\teeny{"slap"}} r8.] r4
     %463
-    cs16[ r8.] r16[ \xH cs16.->^\markup{\teeny{"+"}}( g''32\flageolet) r16]
+    cs16->-.[ r8.] r16[ \xH cs16.->^\markup{\teeny{"+"}}( g''32\flageolet) r16]
     %464
     \stopStaff s2
     %465
     \startStaff
     r8[ \slap cs,,16->-.\mf r16] \tuplet3/2{r8[ \xH b''8->( g16-.) r16]} 
     %466
-    \tuplet3/2{r8[ r8 fs,8-.]} \tuplet 5/4{r16[ cs8.->( g''16-.\flageolet)]}
+    \tuplet3/2{r8[ r8 fs,16->^\markup{"+"}-.( g'16\flageolet)]} \tuplet 5/4{r16[ cs,,8.->(^\markup{"+"} g''16-.\flageolet)]}
     %467
     \stopStaff s2
     %468
     \startStaff
     \slap cs,,16-.->[ r16 r8] r4
     %469
-    r4 \tuplet5/4{r8[ ds16 \xH cs16(-.-> g''16\flageolet)]}
+    r4 \tuplet5/4{r8[ ds16->-. \xH cs16(-.->^\markup{"+"} g''16\flageolet)]}
     %470
     r8[ \slap fs16-.-> r16] r8[ r16 \xH cs,16-.->^\markup{\teeny{"+"}}](
     %471
@@ -771,7 +771,7 @@ contraBassCl = \new Staff = "Heni" \with{
     %472
     r32[ \xH c!32-.(^\markup{\teeny{"+"}} g''16\flageolet) r8] r4
     %473
-    r16.[ \slap cs,,16( \xH g''32\flageolet) r16] r4
+    r16.[ \slap cs,,16->-.( \xH g''32\flageolet) r16] r4
     %474
     r16[ \slap fs,16-. r8] r8[ r16. cs32-.](
     %475
@@ -817,18 +817,20 @@ contraBassCl = \new Staff = "Heni" \with{
     <<\relative c' {\diamondH \override NoteHead.no-ledgers = ##t \stemDown \once \override Stem.length = #30 <e'' f>4..\-
     b,16\rest}
     \\
-    \relative c'{\stemDown \tupletDown \tuplet 5/4{c,16_\markup{\teeny{"bisb."}}\pp \override NoteHead.no-ledgers = ##t \magnifyMusic0.5{16 16 16 16}}  
+    \relative c'{\stemDown \tupletDown \tuplet 5/4{c,16\pp \override NoteHead.no-ledgers = ##t \magnifyMusic0.5{16_\markup{\teeny{"bisb."}} 16 16 16}}  
     \magnifyMusic0.5{\tupletDown \tuplet 3/2{c16[ 16 16]} 16 s16}}>>
     \xH r4 r8[ c16.->-.\f^\markup{\teeny{"+"}}( g''32\flageolet)]
-    <<\relative c' {\diamondH \override NoteHead.no-ledgers = ##t \stemDown \once \override Stem.length = #30 <e'' f>4\-
+    %498
+    \dalniente \noireNH cs,,4\-\< r4\fff
+    %{<<\relative c' {\diamondH \override NoteHead.no-ledgers = ##t \stemDown \once \override Stem.length = #30 <e'' f>4\-
     g,,4\rest}
     \\
     \relative c' {\noireNH \hide Stem cs,4\-\pp
-    \hide Rest r4 \undo \hide Rest}>>
-    \xH r8[ c,,16->-.\f^\markup{\teeny{"+"}}( g''16\flageolet)] r4
+    \hide Rest r4 \undo \hide Rest}>>%}
+    \xH r8[ c16->-.\f^\markup{\teeny{"+"}}( g''16\flageolet)] r4
     %500
     \stopStaff s2*3
-    \startStaff r4 <<\relative c'{g'16\rest[ \slap cs,,16->-.\f \dalniente \hide NoteHead \uN cs8:32\<\downbow_\markup{\line{"[R]"}\draw-line#'(5 . 0)}]
+    \startStaff r4 <<\relative c'{g'16\rest[ \slap cs,,16_>_.\f \dalniente \hide NoteHead \uN cs8:32\<\downbow_\markup{\line{"[R]"}\draw-line#'(17 . 0)}]
     \dalniente c4:32\mf\> g''4\rest\!}
     \\
     \relative c'{s8 \uN \hide Stem \lineDashed cs,8\-
@@ -842,44 +844,52 @@ contraBassCl = \new Staff = "Heni" \with{
     \\
     \relative c'{s4  \noireNH <cs a''>4\- \hide Stem s2. g'4\rest}>>
     %510
-    \stopStaff s2*19
+    \stopStaff s2*4
+    \startStaff  \sharpUp \dalniente \blancheNH gs,2--\<\- \stopStaff 
+    %515
+    \hide Rest r2\f \undo \hide Rest  
+     s2*13
     
     %529
-    \startStaff r4 \noireNH gs4\glissando--\p 
-    \magnifyMusic0.5{\naturalDown f!32} r32 r16 r8 r8.[ \slap cs,16->-.\f]
-    <<\relative c' {\diamondH \override NoteHead.no-ledgers = ##t \stemDown \once \override Stem.length = #30 <e'' f>8.\-
+    \startStaff r4 \noireNH \sharpUp gs4\glissando--\p 
+    \magnifyMusic0.5{\naturalDown f!32} r32 r16 r8 r8.[ \slap cs16->-.\f^\markup{\teeny{"slap"}}]
+    %531
+    \dalniente \noireNH cs8.\<\-[ r16]\ff
+    
+    %{<<\relative c' {\diamondH \override NoteHead.no-ledgers = ##t \stemDown \once \override Stem.length = #30 <e'' f>8.\-
     b,16\rest}
     \\
     \relative c' {\noireNH \hide Stem cs,8.\-\pp
-    \hide Rest r16 \undo \hide Rest}>> r16 \tuplet 3/2{\slap g'16-.\p\> 16 16} r16\!
-    \uN r16[ a'8.--\upbow\f_\markup{\line{"[F]"}\draw-line#'(5 . 0)}] \slap b,16-.->\mf\>[ cs16-. r8\!]
+    \hide Rest r16 \undo \hide Rest}>> %}
+    r16 \tuplet 3/2{\slap g'16-.\p\> 16-. 16-.} r16\!
+    \uN r16[ a'8.\---\upbow\f_\markup{\line{"[F]"}\draw-line#'(10 . 0)}] \slap b,16-.->\mf\>[ cs16-. r8\!]
     r16 \tuplet 3/2{cs,16-.\mf\> 16-. 16-.} r16\! 
-    <<\relative c'{\hide NoteHead \uN \tuplet 3/2{g'4\rest a8\upbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}}
-    \tuplet 3/2{4 cs,8\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}} 16[ \undo \hide NoteHead \slap cs,16 g'8\rest]
+    <<\relative c'{\hide NoteHead \uN \tuplet 3/2{g'4\rest a8_-\upbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}}
+    \tuplet 3/2{4 cs,8_-\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}} 16[ \undo \hide NoteHead \slap cs,16_>_.\f g'8\rest]
     fs16_._>\f[ \hide NoteHead \noireNH \dalniente fs8.\<] \dalniente 8\mf\> g'8\rest\!}
     \\
     \relative c'{\hide Stem \uN \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 a'8\-}
-    \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 cs,8\-} s16 \hide Rest r8. 
+    \omit TupletBracket \omit TupletNumber \tuplet 3/2{s4 cs,8\-} s16 \hide Rest r8 s16 
     r16 \undo \hide Rest \undo \hide NoteHead \noireNH fs,8.\- s8 g'\rest}>>
     \stopStaff s2*4
     
     %540
     \startStaff
     <<\relative c'{\hide NoteHead \uN 
-    \tuplet 5/4{gs'4.\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)} ds4\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}} 
-    \tuplet 5/4{d8 b'4.\upbow_\markup{\line{"[g]"}\draw-line#'(5 . 0)} b,8\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}} 
-    \tuplet 5/4{4 ds4.\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}} 
-    \tuplet 5/4{b'4\upbow_\markup{\line{"[sh]"}\draw-line#'(5 . 0)} gs\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)} b,8\upbow_\markup{\line{"[g]"}\draw-line#'(5 . 0)}} 
-    \tuplet 5/4{4 cs,4.\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}} 
-    \tuplet 5/4{gs''4.\upbow_\markup{\line{"[S]"}\draw-line#'(5 . 0)} b4\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)}} 
-    \tuplet 5/4{4. gs,4\upbow_\markup{\line{"[g]"}\draw-line#'(5 . 0)}} 
+    \tuplet 5/4{gs'4._-\upbow_\markup{\line{"[S]"}\draw-line#'(8 . 0)} ds4_-\downbow_\markup{\line{"[F]"}\draw-line#'(8 . 0)}} 
+    \tuplet 5/4{d8 b'4._-\upbow_\markup{\line{"[g]"}\draw-line#'(10 . 0)} b,8_-\downbow_\markup{\line{"[F]"}\draw-line#'(13 . 0)}} 
+    \tuplet 5/4{4 ds4._-\downbow_\markup{\line{"[F]"}\draw-line#'(12 . 0)}} 
+    \tuplet 5/4{b'4_-\upbow_\markup{\line{"[sh]"}\draw-line#'(4 . 0)} gs_-\downbow_\markup{\line{"[F]"}\draw-line#'(5 . 0)} b,8_-\upbow_\markup{\line{"[g]"}\draw-line#'(10 . 0)}} 
+    \tuplet 5/4{4 cs,4._-\downbow_\markup{\line{"[F]"}\draw-line#'(13 . 0)}} 
+    \tuplet 5/4{gs''4._-\upbow_\markup{\line{"[S]"}\draw-line#'(9 . 0)} b4_-\downbow_\markup{\line{"[F]"}\draw-line#'(10 . 0)}} 
+    \tuplet 5/4{4. gs,4_-\upbow_\markup{\line{"[g]"}\draw-line#'(25 . 0)}} 
     g4 8[ g'\rest]}
     \\
     \relative c'{\hide Stem 
     \omit TupletBracket \omit TupletNumber \tuplet 5/4{\uN gs'4.\- ds4\-} 
     \omit TupletBracket \omit TupletNumber \tuplet 5/4{\uN s8 b'4.\- b,8\-} 
     \omit TupletBracket \omit TupletNumber \tuplet 5/4{\uN s4 ds4.\-} 
-    \omit TupletBracket \omit TupletNumber \tuplet 5/4{\uN b'4 gs4\- b,8\-} 
+    \omit TupletBracket \omit TupletNumber \tuplet 5/4{\uN b'4\- gs4\- b,8\-} 
     \omit TupletBracket \omit TupletNumber \tuplet 5/4{\uN s4 cs,4.\-} 
     \omit TupletBracket \omit TupletNumber \tuplet 5/4{\uN gs''4.\- b4\-} 
     \omit TupletBracket \omit TupletNumber \tuplet 5/4{\uN s4. gs,4\-} 
