@@ -50,7 +50,7 @@
     >>
 }
 
-\layout {	
+\layout {	 
 
   indent = 3.0 \cm 
   short-indent = 1.5 \cm

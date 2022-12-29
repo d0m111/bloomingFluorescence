@@ -25,8 +25,8 @@ electro = \new Staff = "electro" \with{
     \startStaff \repeat unfold 6{b4 d4} %\break 
     \stopStaff s2*4
     \startStaff
-    \repeat unfold 10{b4 d4} %\break
-    \stopStaff s2*12
+    \repeat unfold 16{b4 d4} %\break
+    \stopStaff s2*6
     \startStaff
     \repeat unfold 14{b4 d} %\break
     \stopStaff s2*6

@@ -76,9 +76,26 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     r4 \lineDashed bf,16:32[\upbow\-_--\markup{\line{"[R]"}\draw-line#'(0.3 . 0)} a'8.]\downbow--\-_\markup{\line{"[F]"}\draw-line#'(10 . 0)}\stopStaff
     %31
     \hide Rest r2 \undo \hide Rest  %\break
+    %32
+    \startStaff
+    r4 r16[ cs,8.]_-\-_\markup{\line{"[g]"}\draw-line#'(7 . 0)}\downbow
+    %33
+    b'4--\upbow\-_\markup{\line{"[sh]"}\draw-line#'(9 . 0)} r4 
+    r4 <<\relative c'{b'16\rest[ \hide NoteHead \uN b8._-\downbow_\markup{\line{"[s]"}\draw-line#'(40 . 0)}]
+         4 4
+         4 4
+         4 b4\rest}
+         \\
+         \relative c'{\hide Stem
+        s16 \uN b'8.\-
+        s2
+        s2
+        s4 b4\rest
+    }>>
+    \stopStaff 
     %32-44
-    s2*8 %\break
-    s2*5 %\break
+    s2*7 %\break
+   
 
     %m45
     \startStaff
@@ -92,13 +109,13 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     g8.\rest[ d16\downbow] 8.[ g16\rest] }
     \\
     %45 (final part of the measure)
-    \relative c{g''8\rest s16 \hide Stem \uN b16\-_\markup{\line{"[s]"}\draw-line#'(1 . 0)}
+    \relative c{g''8\rest s16 \hide Stem \uN b16\-_\markup{\line{"[s]"}\draw-line#'(10 . 0)}
     %46
-    s8. cs,16\-_\markup{\line{"[F]"}\draw-line#'(7 . 0)} s8. g'16\rest
+    s8. cs,16\-_\markup{\line{"[F]"}\draw-line#'(9 . 0)} s8. g'16\rest
     %m47
-    g8\rest s32 b16.\-_\markup{\line{"[g]"}\draw-line#'(5 . 0)} s8. g16\rest
+    g8\rest s32 b16.\-_\markup{\line{"[g]"}\draw-line#'(8 . 0)} s8. g16\rest
     %48
-    g8\rest s16 d16\-_\markup{\line{"[F]"}\draw-line#'(5 . 0)} s8. g16\rest
+    g8\rest s16 d16\-_\markup{\line{"[F]"}\draw-line#'(8 . 0)} s8. g16\rest
     }>>
     %m49
     \stopStaff
@@ -112,7 +129,7 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     8[ g\rest]}
     \\
     %m51
-    \relative c{\hide Stem \uN d''4\-_\markup{\line{"[S]"}\draw-line#'(7 . 0)} s16 d,8.\-_\markup{\line{"[F]"}\draw-line#'(7 . 0)}
+    \relative c{\hide Stem \uN d''4\-_\markup{\line{"[S]"}\draw-line#'(7 . 0)} s16 d,8.\-_\markup{\line{"[F]"}\draw-line#'(15 . 0)}
     %52
     s8 g\rest}>>
     r4 \stopStaff
@@ -226,14 +243,14 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     \relative c'{\uN cs1\- 
     s2... e16\rest}>>
     \stopStaff s2*2  %m4 
-    \startStaff r4 \uN cs8.\-[  r16] 
+    \startStaff r4 \uN cs8._-\-[\downbow_\markup{\line{"[g]"}\draw-line #'(5 . 0)}   r16] 
     \stopStaff 
     s2
     \startStaff %m5
-    << \relative c{ b''4\rest r8[ \hide NoteHead \uN f8] 4 4 %m6
+    << \relative c{ b''4\rest r8[ \hide NoteHead \uN f8_-] 4 4 %m6
     4 4 4 4} %m7
     \\
-    \relative c{s4 \hide Stem s8 \uN f'8\- s4 s4 %m6
+    \relative c{s4 \hide Stem s8 \uN f'8\-_\markup{\line{"[F]"}\draw-line #'(27 . 0)}^\downbow  s4 s4 %m6
     s1 
     \stopStaff
 
@@ -268,7 +285,7 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     \undo \hide Rest
     r8 \slap \tuplet 3/2{cs16\p\>-.( ds-. e-.)} \tuplet 3/2{fs16-.( gs-. a-.)} r8\!
     %136
-    <<\relative c{\hide NoteHead \uN b'4\downbow_\markup{\line{"[g]"}\draw-line#'(7 . 0)} \tuplet 3/2{8 a'4_\markup{\line{"[F]"}\draw-line#'(3 . 0)}\upbow}}
+    <<\relative c{\hide NoteHead \uN b'4_-\downbow_\markup{\line{"[g]"}\draw-line#'(12 . 0)} \tuplet 3/2{8 a'4_\markup{\line{"[F]"}\draw-line#'(5 . 0)}_-\upbow}}
     \\
     \relative c{\hide Stem \uN b'4\- \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 a'4\-}}>>
     %137
@@ -276,7 +293,7 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     %138
     \startStaff
     \undo \hide Rest
-    \lineDashed \uNw b,2:32\downbow\-\f_\markup{\line{"[R]"}\draw-line#'(7 . 0)}
+    \lineDashed \uNw b,2:32--\downbow\-\f_\markup{\line{"[R]"}\draw-line#'(15 . 0)}
     %139
     \stopStaff \hide Rest r2 
     %140
@@ -284,7 +301,7 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     %160
     \startStaff
     \undo \hide Rest
-    <<\relative c{d'8\rest[ d32\rest \hide NoteHead \uN c16.\upbow_\markup{\line{"[F]"}\draw-line#'(7 . 0)}] 32[ d8..\rest]^\markup{\teeny \box \bold{"reed ON"}}}
+    <<\relative c{d'8\rest[ d32\rest \hide NoteHead \uN c16.\upbow_\markup{\line{"[F]"}\draw-line#'(3.5 . 0)}] 32[ d8..\rest]^\markup{\teeny \box \bold{"reed ON"}}}
     \\
     \relative c{s8 s32 \uN \hide Stem c'16.\- s32 d8\rest s16. }>>
     \stopStaff
@@ -308,7 +325,7 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
     %182
     \startStaff
     \undo \hide Rest
-    <e fs c''>16\-[ r16 r16 aqs16\-] r4
+    <e fs c''>16\ppp--\-[ r16 r16 aqs16--\-] r4
     %183
     <<\relative c{\hide NoteHead \noireNH s8 \hide Stem <a'' b c' e>8 \undo \hide Stem \stemDown 8[ g8\rest]}
     \\
@@ -775,7 +792,13 @@ oboe = \new StaffGroup = "Tamon Yashima" \with{
   \startStaff
   \repeat unfold 2{\uN b8.\-[ \uNw 16] r4}
   \stopStaff %30
-  s2*15
+  s2*2 \startStaff 
+  r4 r16[ \uN b8.\-]
+  \uNw 16-.[ r8.] r4 \stopStaff
+  s2*3 \startStaff
+  %37
+  \uN b4\- \uNw b16-.[ r8.]
+  \stopStaff s2*7
   %45
   \startStaff 
   \uN b8.[\- \uNw 16-.] r4
