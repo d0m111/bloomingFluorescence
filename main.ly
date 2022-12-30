@@ -16,7 +16,7 @@
 
 #(set-default-paper-size "a4landscape")
 % #(set-default-paper-size "a3portrait")
-%#(ly:set-option 'point-and-click #f)
+#(ly:set-option 'point-and-click #f)
 #(set-global-staff-size 19.5)
 
 \score{
@@ -50,7 +50,7 @@
     >>
 }
 
-\layout {	 
+\layout {	   
 
   indent = 3.0 \cm 
   short-indent = 1.5 \cm

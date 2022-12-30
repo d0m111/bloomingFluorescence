@@ -39,7 +39,7 @@ cello = \new Staff = "Rob" \with{
     c,16-.^\markup{\teeny {"pizz."}}\laissezVibrer r16 r8 r8
     <<\relative c{\hide NoteHead s8 \repeat unfold 3{<c, d'>8}}
     \\
-    \relative c{\stemUp \dalniente <c, d'\harmonic>8\-\<^\markup{\teeny{"legno/crine"}} \hide Stem \dalniente s8 s8\mp\> s8 r8\!}>>
+    \relative c{\stemUp \dalniente \lineDashed <c, d'\harmonic>8\-\<^\markup{\teeny{"legno/crine"}} \hide Stem \dalniente s8 s8\mp\> s8 r8\!}>>
 
     %m15
     \stopStaff s2 
@@ -91,16 +91,17 @@ cello = \new Staff = "Rob" \with{
       \relative c'{\hide Stem 
     s16 \diamondH \lineDashed fs,8\-\mp s16 s4}>>
     \stopStaff 
-
-    %32-44
-    s2*10
+    s2*2 \startStaff
+   \dalniente c4\-\<^\markup{\teeny{"crine"}} r4\fff \stopStaff 
+   %38-44
+    s2*7
 
     %m45
     \startStaff
     r4^\markup{\teeny  \hspace#-2. \box \teeny{"pitch filtered sound (like air)"}} <<\relative c{
-      r16 \hide NoteHead \uN b8.^\markup{\teeny{"s.t"}} 
+      r16 \hide NoteHead \uN b8.--^\markup{\teeny{"crine"}} 
     %m46 
-    b16 fs'8. d8.\rest[ d16]
+    b16 fs'8.-- d8.\rest[ d16--]
     %m47
     8. d16\rest d4\rest
     %m48
@@ -213,7 +214,7 @@ cello = \new Staff = "Rob" \with{
     r16 \noireNH c,,,8.-.\mp\laissezVibrer^\markup{\teeny{"pizz."}} r4
     %87
     \clef treble 
-    <<\relative c{\hide NoteHead \uN \stemDown \tuplet 3/2{g''8\rest^\markup{\teeny{"crine"}} a'4} 16[ g8.\rest]}
+    <<\relative c{\hide NoteHead \uN \stemDown \tuplet 3/2{g''8\rest^\markup{\teeny{"crine"}} a'4--} 16[ g8.\rest]}
     \\
     \relative c{\hide Stem \omit TupletBracket \omit TupletNumber \tuplet 3/2{s8 \uN \lineDashed a'''4\p\-} s16 g8\rest s16}>>
     %88
@@ -277,12 +278,16 @@ cello = \new Staff = "Rob" \with{
     %138
     \diamondH <d, a'>2\-\pp^\markup{\teeny{"bowing slowly(as much as possible)"}}
     %139
-    \stopStaff \hide Rest r2
-    %140_157
-    s2*18
+    \stopStaff \hide Rest r2 s2 \startStaff \undo \hide Rest
+    <<\relative c'{\hide NoteHead \diamondH \stemNeutral <a cs>2:32--^\markup{\teeny{"tremolo alla punta (serratissimo)"}}
+                   <a c>2:32}
+      \\
+      \relative c'{\hide Stem \diamondH \lineDashed <a cs>2\- s2}>> \stopStaff 
+    %143_157
+    s2*15
     %158_160
     \startStaff
-    \undo \hide Rest
+    %\undo \hide Rest
     <<\relative c{\hide NoteHead \stemDown d2-- 2 8.[ d16\rest]}
     \\
     \relative c{\hide Stem \diamondH \flatUp d2\-\pp^\markup{\teeny{"crine"}} s2 s8. d16\rest}>> r4
@@ -334,14 +339,14 @@ cello = \new Staff = "Rob" \with{
     r4 <<\relative c{\hide NoteHead \noireNH \stemDown f4--\ppp^\markup{\teeny{"col legno tratto (fast bowing)"}} 4}
     \\
     \relative c{\hide Stem \noireNH \lineDashed fqs4\- s4}>>
-    \diamondH \dalniente fs,,8.\-\<^\markup{\teeny{"crine"}}[ r16\mf]
+     \dalniente fs,,8.\-\<^\markup{\teeny{"crine"}}[ r16\mf]
     %187-188
     r4 <<\relative c{\hide NoteHead \diamondH \stemDown \tupletDown \tuplet 3/2{r8[ r8 cs'8--^\markup{\teeny{"legno/crine"}}]} c16 <b, fs'>8.--}
     \\
-    \relative c{\hide Stem \diamondH \omit TupletNumber \omit TupletBracket \tuplet 3/2{ s8 s8 cs'8\-\mp} s16 <b, fs'>8\- s16}>>
+    \relative c{\hide Stem \diamondH \omit TupletNumber \omit TupletBracket \tuplet 3/2{ s8 s8 \lineDashed cs'8\-\mp} s16 \lineDashed <b, fs'>8\- s16}>>
     r4
     %189
-    r4 \diamondH a'8--\-\mp[ r8]
+    r4 \diamondH \lineDashed a'8--\-\mp[ r8]
     %190
     \clef treble 
     <<
@@ -463,16 +468,19 @@ cello = \new Staff = "Rob" \with{
     \\
     \relative c'{g'8\rest \hide Stem s16  \lineDashed \uN d'16\-\mp s16 g,8\rest s16}>>
     \stopStaff
-    s2*2
+    s2*3 \startStaff
+    \clef bass
+    r16[ \uN \lineDashed c,,,8.\---\fff] r4 \stopStaff
     %274
-    s2*7
+    s2*5
     %281
     \startStaff
     \clef bass
-    \diamondH d,8\mf\laissezVibrer-.^\markup{\teeny{"pizz."}}[ r8] r4
+    \diamondH d''8\mf\laissezVibrer-.^\markup{\teeny{"pizz."}}[ r8] r4
     \clef treble r16[\uN \lineDashed cs'8\-\mf--^\markup{\teeny{"crine"}} r16] r4
-    \stopStaff s2*2
-    \startStaff \clef bass r16[ \uN a,,8.\mp--\-] r4
+    \clef bass r4 r16[ \dalniente \noireNH d,,,8.\-\<]
+    \stopStaff \hide Rest r2\ff \undo \hide Rest
+    \startStaff  r16[ \uN a'8.\mp--\-] r4
     r4 <<\relative c'{\stemDown \hide NoteHead \diamondH a4\mp^\markup{\teeny{"crine/legno (fast bowing)"}} 
     16[ \lineDashed fs8--\- d16\rest] }
     \\
@@ -481,9 +489,9 @@ cello = \new Staff = "Rob" \with{
     \stopStaff s2*11
     %299
     \startStaff 
-    r4^\markup{\teeny{"crine"}}
+    r4
     <<
-    \relative c{\hide NoteHead \stemUp  d8\rest[ \dalniente \once \override NoteColumn.force-hshift = #0.5 <c, b'>8^\markup{\teeny{"crine/legno (hyper slow bowing"}}]\< \dalniente 8\p\>[ d'8\rest\!]}
+    \relative c{\hide NoteHead \stemUp  d8\rest[ \dalniente \once \override NoteColumn.force-hshift = #0.5 <c, b'>8^\markup{\teeny{"crine/legno (bowing slowly)"}}]\< \dalniente 8\p\>[ d'8\rest\!]}
     \\
     \relative c{ \hide Stem \blancheNH s8 \once \override NoteColumn.force-hshift = #0.5 \lineDashed c,4\-\pp d'8\rest}
     \\
@@ -685,7 +693,13 @@ cello = \new Staff = "Rob" \with{
     \\
     \relative c'{s4 \flatUp \diamondH \hide Stem af4\- s4 d,4\rest}>>
     %441
-    \stopStaff s2*5
+    <<\relative c'{\hide NoteHead 
+      d,8.\rest[ \uN c,16_-] 8[ d'8\rest] }
+      \\
+      \relative c'{\hide Stem \stemUp 
+      s8. \uN \lineDashed c,,16\f\- s8 d'8\rest
+    }>>
+    \stopStaff s2*4
 
     %446 [27]
     \startStaff
@@ -803,9 +817,11 @@ cello = \new Staff = "Rob" \with{
     %510
     s2*4 \startStaff
     \dalniente \noireNH fs4\p\>^\markup{\teeny{"pizz"}}\glissando \magnifyMusic 0.5 {c32\!} r32 r8.
-    \stopStaff s2*14
+    r8[ \diamondH fs'8-.\laissezVibrer]^\markup{\teeny{"pizz."}}\mf r4
+    r4 r8.[ <a cs>16-.\laissezVibrer^\markup{\teeny{"pizz."}}\mf]
+    \stopStaff s2*12
     \startStaff 
-    r4 \diamondH a''8\p^\markup{\teeny{"pizz."}}-.\laissezVibrer[ r8]
+    r4 \diamondH a8\p^\markup{\teeny{"pizz."}}-.\laissezVibrer[ r8]
     \stopStaff s2
     \startStaff \noireNH \dalniente d,,8..\mp\>->-.\glissando^\markup{\teeny{"pizz."}} \magnifyMusic0.5{c32}  r4\!
     r4 <<\relative c'{\hide NoteHead \noireNH \dalniente d,,4\<
