@@ -183,10 +183,10 @@ accordion = \new StaffGroup = "Filip" \with{
     s2*9
     %170
     \startStaff
-    r4 \noireNH <b' cs d>8\ppp\-[ r8]
+    r4 \noireNH <b' cs d>8--\ppp\-[ r8]
     %171
     \clef bass
-    r4 \noireNH \octavaDown af,,4\mp\glissando \glissandoSkipOn 
+    r4 \noireNH \octavaDown af,,4--\mp\glissando \glissandoSkipOn 
     %172
     g4 gf8.. \glissandoSkipOff \undo \hide NoteHead \magnifyMusic0.5{f!32} \stopOctava
     % <<\relative c{\octavaUp \makeClusters{ <a''''>4\pp <g a>8 <fs a>8 <g a>8 <a>8 } \stopOctava} 
@@ -219,7 +219,7 @@ accordion = \new StaffGroup = "Filip" \with{
     r4
     %240
     \stopStaff
-    r4 <<\relative c{\hide NoteHead \tuplet 3/2{d'8\rest d16-> d16-> d16-> d16->} \tuplet 3/2{ d16-> d16-> d16-> d16-> d8\rest}}
+    r4 <<\relative c{\hide NoteHead \tuplet 3/2{d'8\rest d16\fff-> d16-> d16-> d16->} \tuplet 3/2{ d16-> d16-> d16-> d16-> d8\rest}}
     \\
     \relative c{\uN \omit TupletBracket \omit TupletNumber \tuplet 3/2{d'8\rest d4\-} \tuplet 3/2{s4 d8\rest}}>>
     r4
@@ -381,8 +381,8 @@ accordion = \new StaffGroup = "Filip" \with{
     %379
     \hide Stem 
     s4 s16 \makeClusters{<a'>8. 
-    <e a>4  \override NoteHead.no-ledgers = ##t <b a'>16}  \override NoteHead.no-ledgers = ##f a'8.\-
-    g,4\rest a'4\-
+    <e a>4  \override NoteHead.no-ledgers = ##t <b a'>16}  \override NoteHead.no-ledgers = ##f a'8.--\-
+    g,4\rest a'4--\-
     s8 s32. \hide Rest r64 \undo \hide Rest \makeClusters{<fs, a'>16 <cs' a'>8 <f a>8
     <gs a>16} \makeClusters{ <a>8. <a>4
     <a>8.. <cs, a'>32}
@@ -613,7 +613,7 @@ accordion = \new StaffGroup = "Filip" \with{
     \relative c{ \uN g16\f\- s8.}>> r16
     %m14
     \startStaff
-    \tuplet 3/2{r8 \octavaDown \noireNH \dalniente fs,,4\p\>\glissando \glissandoSkipOn} f8. \glissandoSkipOff e16\! \stopOctava
+    \tuplet 3/2{r8 \octavaDown \noireNH \dalniente fs,,4--\p\>\glissando \glissandoSkipOn} f8. \glissandoSkipOff e16\! \stopOctava
 
     %m15
     \stopStaff
@@ -643,7 +643,7 @@ accordion = \new StaffGroup = "Filip" \with{
 
     %m28
     \startStaff
-    r4 r16[ \noireNH  \dalniente \octavaDown <f, g>8.]\glissando\p\> 
+    r4 r16[ \noireNH  \dalniente \octavaDown <f, g>8.--]\glissando\p\> 
     %m29
     \magnifyMusic 0.5{<e fs>32} \stopOctava r32\! r16 r8 r4
     %m30
@@ -796,7 +796,7 @@ accordion = \new StaffGroup = "Filip" \with{
     %124
     <<\relative c{\hide NoteHead \noireNH f,,2_- 4 c'4\rest}
     \\
-    \relative c{\blancheNH \hide Stem \octavaDown f,,2\-  %m8 
+    \relative c{\blancheNH \hide Stem \octavaDown fs,,2\ppp\-  %m8 
     s4 c'4\rest \stopOctava }>>
     %\dalniente \octavaDown cs,8.\> \glissando c!16\! \stopOctava r2. 
 
@@ -806,7 +806,7 @@ accordion = \new StaffGroup = "Filip" \with{
     \startStaff \autoBeamOn 
     <<\relative c{s8 \hide NoteHead \noireNH \repeat unfold 4{\tuplet 3/2 {f,,16-> 16-> 16->} } 16->[ g'\rest]}
     \\
-    \relative c{ \undo \hide Stem g8\rest[ \noireNH \octavaDown f,8\-\mf] s4 s8. \stopOctava g'16\rest }>>
+    \relative c{ \undo \hide Stem g8\rest[ \noireNH \octavaDown fs,8\-\mf] s4 s8. \stopOctava g'16\rest }>>
     r4
 
     %127-133
@@ -845,7 +845,7 @@ accordion = \new StaffGroup = "Filip" \with{
     s2
     %171
     \startStaff
-    r4 \undo \hide NoteHead \noireNH \octavaDown a4\mp\glissando \glissandoSkipOn 
+    r4 \undo \hide NoteHead \noireNH \octavaDown a4--\mp\glissando \glissandoSkipOn 
     %172
     gs4 f!8.. \glissandoSkipOff \undo \hide NoteHead \magnifyMusic0.5{fs32} \stopOctava
     \stopStaff
@@ -858,7 +858,7 @@ accordion = \new StaffGroup = "Filip" \with{
     \stopStaff
     s2*8
     %182
-    <<\relative c{d8\rest s16 \hide NoteHead \uN  d32->\- \repeat unfold 5{d32->} d8\rest}
+    <<\relative c{d8\rest s16 \hide NoteHead \uN  d32\fff->\- \repeat unfold 5{d32->} d8\rest}
     \\
     \relative c{d8.\rest[ \uN d16\-] s8 d8\rest}>>
     %183
@@ -1012,7 +1012,7 @@ accordion = \new StaffGroup = "Filip" \with{
     \startStaff
     \octavaDown \dalniente <f gf>8..\glissando\mf--\> \magnifyMusic0.5{<e f>32\!} \stopOctava r4
     \stopStaff s2*5
-    <<\relative c'{ \hide NoteHead \uN \tuplet 5/4{d16\rest[ d16\rest d16\rest d8\f\downbow]} \tuplet 5/4{d16[ d16\rest d16\rest d16\rest d16\downbow]}
+    <<\relative c'{ \hide NoteHead \uN \tuplet 5/4{d16\rest[ d16\rest d16\rest d8_-\f\downbow]} \tuplet 5/4{d16[ d16\rest d16\rest d16\rest d16_-\downbow]}
     \tuplet 5/4{16[ d16\rest d16\rest d16\rest d16_-_>\downbow]} d16\pp[ d16\rest d16\rest d16\f\downbow_-_>] 
     %361
     d16_-->\upbow[ d8.\rest] d16\rest[ d16\downbow\f_-_> d16\upbow_-_> d16\rest]
@@ -1113,9 +1113,9 @@ accordion = \new StaffGroup = "Filip" \with{
     \undo \hide Rest 
     %410
     r4
-    <<\relative c'{\hide NoteHead \uNw d,32-> \repeat unfold 15{d32->} }
+    <<\relative c'{\hide NoteHead \uN d,32-> \repeat unfold 13{d32->} d16\rest }
     \\
-    \relative c'{\uNw d,2\-\fffff }>> r4
+    \relative c'{\uN d,4\-\fffff s8 s16 d16\rest }>> r4
     \stopStaff \hide Rest r2 
     \undo \hide Rest 
     % \stopStaff
@@ -1138,7 +1138,7 @@ accordion = \new StaffGroup = "Filip" \with{
     %439
     s2*3
     %446
-    \startStaff \blancheNH \octavaDown f2--\- \stopStaff \hide Rest  r2 \stopOctava
+    \startStaff \blancheNH \octavaDown fs2--\- \stopStaff \hide Rest  r2 \stopOctava
     \undo \hide Rest \startStaff 
     %448 
     <<\relative c'{\hide NoteHead \noireNH d,4\rest \octavaDown f,,4
@@ -1146,7 +1146,7 @@ accordion = \new StaffGroup = "Filip" \with{
     d4\rest d8\rest[ \octavaDown <f,, a>8]
     4 8[ \stopOctava d''8\rest]}
     \\
-    \relative c'{\hide Stem \stemUp s4 f,,,4_-\-
+    \relative c'{\hide Stem \stemUp s4 fs,,,4_-\-
     s4 s16 d''16\rest s8
     s4. <fs,, a>8_-\-
     s4 s8 d8\rest}>>
