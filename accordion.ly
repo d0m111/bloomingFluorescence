@@ -382,7 +382,7 @@ accordion = \new StaffGroup = "Filip" \with{
     \hide Stem 
     s4 s16 \makeClusters{<a'>8. 
     <e a>4  \override NoteHead.no-ledgers = ##t <b a'>16}  \override NoteHead.no-ledgers = ##f a'8.--\-
-    g,4\rest a'4--\-
+    g,4\rest a'4^-\-
     s8 s32. \hide Rest r64 \undo \hide Rest \makeClusters{<fs, a'>16 <cs' a'>8 <f a>8
     <gs a>16} \makeClusters{ <a>8. <a>4
     <a>8.. <cs, a'>32}
